@@ -28,7 +28,7 @@ h1 {
 }
 
 .info {
-  width: 350px;
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -43,7 +43,28 @@ p {
   font-family: "Rubik";
   color: white;
   font-size: 1em;
-  width: 100px;
+  width: 30%;
   text-align: center;
   margin: 0;
+}
+
+$breakpoint-tablet: 768px;
+@media (min-width: $breakpoint-tablet){
+  body {
+    background-size:100vw;
+    background-position-y: center;
+  }
+  img {
+    width: 50%;
+  }
+  h1{
+    font-size: 4.5em;
+  }
+  .info{
+    width: 50%;
+  }
+  p{
+    font-size: 1.4em;
+    width: 25%;
+  }
 }
