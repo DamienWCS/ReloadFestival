@@ -1,11 +1,11 @@
 @font-face {
   font-family: "Righteous";
-  src: url("./assets/Fonts/Righteous-Regular.ttf");
+  src: url("../assets/Fonts/Righteous-Regular.ttf");
 }
 
 @font-face {
   font-family: "Rubik";
-  src: url("./assets/Fonts/Rubik-Regular.ttf");
+  src: url("../assets/Fonts/Rubik-Regular.ttf");
 }
 
 h1{
@@ -18,7 +18,7 @@ p, h2, h3 {
 }
 
 body{
-  background-image: url("./assets/Images/Background Image1.jpg");
+  background-image: url("../assets/Images/Background\ Image1.jpg");
   background-size: auto 100vh;
   background-position-x: center;
 }
