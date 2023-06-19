@@ -1,17 +1,4 @@
-@font-face {
-  font-family: "Righteous";
-  src: url("../assets/Fonts/Righteous-Regular.ttf");
-}
-
-@font-face {
-  font-family: "Rubik";
-  src: url("../assets/Fonts/Rubik-Regular.ttf");
-}
-
 body {
-  background-image: url("../assets/Images/Background Image1.jpg");
-  background-size: auto 100vh;
-  background-position-x: center;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -20,9 +7,7 @@ body {
 }
 
 h1 {
-  font-family: "Righteous";
   font-size: 3.8em;
-  color: white;
   margin: 0.2em;
   text-align: center;
 }
@@ -40,8 +25,6 @@ img {
 }
 
 p {
-  font-family: "Rubik";
-  color: white;
   font-size: 1em;
   width: 30%;
   text-align: center;
@@ -50,10 +33,6 @@ p {
 
 $breakpoint-tablet: 768px;
 @media (min-width: $breakpoint-tablet){
-  body {
-    background-size:100vw;
-    background-position-y: center;
-  }
   img {
     width: 50%;
   }
