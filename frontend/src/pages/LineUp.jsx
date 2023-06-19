@@ -1,6 +1,10 @@
 import React from "react";
 
 function LineUp() {
-  return <h1>LineUp</h1>;
+  return (
+    <div className="component">
+      <h1>Line-Up</h1>
+    </div>
+  );
 }
 export default LineUp;
