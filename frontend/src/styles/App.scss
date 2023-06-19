@@ -1,0 +1,32 @@
+@font-face {
+  font-family: "Righteous";
+  src: url("../assets/Fonts/Righteous-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/Fonts/Rubik-Regular.ttf");
+}
+
+h1{
+  font-family: "Righteous";
+  color:white;
+}
+p, h2, h3 {
+  font-family: "Rubik";
+  color:white;
+}
+
+body{
+  background-image: url("../assets/Images/Background\ Image1.jpg");
+  background-size: auto 100vh;
+  background-position-x: center;
+}
+
+$breakpoint-largeScreen: 768px;
+@media (min-width: $breakpoint-largeScreen){
+  body {
+    background-size:100vw;
+    background-position-y: center;
+  }
+ }
