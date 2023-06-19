@@ -1,0 +1,86 @@
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+
+body{
+display: flex;
+flex-direction: column;
+align-items: center;
+background-image: url(https://images.unsplash.com/photo-1557682268-e3955ed5d83f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2FsbHBhcGVyJTIwcHVycGxlfGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60);
+}
+
+.lineup-block{
+display: flex;
+width: 100dvw;
+height: 150px;
+justify-content: center;
+align-items: center;
+margin-top: 40px;
+h2{
+font-size: xx-large;
+
+}
+}
+
+.box-filter{
+display: grid;
+grid-template-columns: repeat(3);
+grid-template-rows: repeat(4);
+width: 100dvw;
+height: 200px;
+justify-content: space-around;
+
+
+input{
+    margin-top: 25px;
+    height: 30px;
+    grid-column: 1/3;
+}
+button{
+    cursor: pointer;
+}
+
+
+.button-artistes{
+   height: 25px;
+}
+.button-stage{
+    height: 25px;
+ }
+ .button-day{
+    height: 25px;
+ }
+ .button-day{
+    height: 25px;
+ }
+
+}
+
+.stage_content{
+    width: 100dvw;
+   
+   
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 20px;
+    list-style: none;
+    justify-content: center;
+    
+}
+li{
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+h4{
+    display: flex;
+    justify-content: center;
+}
+
+}
+
