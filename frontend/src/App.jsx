@@ -1,11 +1,13 @@
-import "./App.css";
-import LineUp from "./pages/LineUp";
+import "./styles/App.scss";
+import NavBar from "./components/NavBar";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
-    <div className="App">
-      <LineUp />
-    </div>
+    <>
+      <NavBar />
+      <AppRoutes />
+    </>
   );
 }
 
