@@ -1,3 +1,6 @@
+## Description Project
+We want to create a website for a music festival. On this website, we can see a line-up of artist showcased at the festival and acces informations on each artits obtained through the spotify API. There will be the possibility to search for artist by genre or several filters.
+
 ## Concept
 
 This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
