@@ -1,131 +1,23 @@
-import React from "react";
+import "../styles/HomePage.scss";
 
 function HomePage() {
   return (
     <div className="component">
-      <h1>Home</h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quo suscipit
-        hic reprehenderit qui quibusdam quas expedita, quos id quasi
-        consequuntur vel tenetur? Ducimus hic placeat a quae illum doloribus
-        quis fugiat dolorem reiciendis odit nesciunt nulla voluptas ipsam,
-        aspernatur, temporibus numquam delectus. Illo, doloremque labore esse
-        voluptates quod cupiditate adipisci commodi quis voluptas temporibus ut
-        magni unde ab voluptatem sint dolores quos illum, neque pariatur eveniet
-        aperiam ullam ad architecto assumenda? Animi velit ducimus recusandae!
-        Odit nulla labore quis dolore.
-      </p>
+      <h1>Reload Fest</h1>
+      <div className="info">
+        <p>19 & 20th August 2023</p>
+        <p>Les Minimes</p>
+        <p>Larochelle</p>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1582711012124-a56cf82307a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1240&q=80"
+        alt="Crowd in front of a stage"
+      />
+      <div className="mainArtists">
+        *****A changer: têtes d'affiche du festival en animation défilante
+      </div>
     </div>
   );
 }
+
 export default HomePage;
