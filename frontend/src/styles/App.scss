@@ -18,16 +18,18 @@ h3 {
   font-family: "Rubik";
   color: white;
 }
+:root{
 
-body {
   background-image: url("../assets/Images/Background\ Image1.jpg");
   background-size: auto 100vh;
   background-position-x: center;
 }
+// body {
+// }
 
 $breakpoint-largeScreen: 768px;
 @media (min-width: $breakpoint-largeScreen) {
-  body {
+  :root {
     background-size: 100vw;
     background-position-y: center;
   }
@@ -44,6 +46,6 @@ ul {
   padding: 0;
   margin: 0;
 }
-.component {
-  margin-top: 80px;
-}
+// .component {
+//   margin-top: 80px;
+// }
