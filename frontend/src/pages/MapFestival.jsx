@@ -2,7 +2,7 @@ import React from "react";
 
 function MapFestival() {
   return (
-    <div className="component">
+    <div>
       <h1>Map Festival</h1>
     </div>
   );

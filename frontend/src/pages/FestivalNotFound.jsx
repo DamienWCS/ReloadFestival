@@ -2,7 +2,7 @@ import React from "react";
 
 function FestivalNotFound() {
   return (
-    <div className="component">
+    <div>
       <h1>Festival Not Found</h1>
     </div>
   );

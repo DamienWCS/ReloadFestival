@@ -2,7 +2,7 @@ import React from "react";
 
 function LineUp() {
   return (
-    <div className="component">
+    <div>
       <h1>Line-Up</h1>
     </div>
   );
