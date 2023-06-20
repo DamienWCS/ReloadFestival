@@ -2,7 +2,7 @@ import "../styles/HomePage.scss";
 
 function HomePage() {
   return (
-    <div className="HomePage">
+    <div className="homePage">
       <h1>Reload Fest</h1>
       <div className="info">
         <p>19 & 20th August 2023</p>
