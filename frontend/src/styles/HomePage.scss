@@ -1,4 +1,4 @@
-body {
+.home-page {
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -32,17 +32,17 @@ p {
 }
 
 $breakpoint-tablet: 768px;
-@media (min-width: $breakpoint-tablet){
+@media (min-width: $breakpoint-tablet) {
   img {
     width: 50%;
   }
-  h1{
+  h1 {
     font-size: 4.5em;
   }
-  .info{
+  .info {
     width: 50%;
   }
-  p{
+  p {
     font-size: 1.4em;
     width: 25%;
   }

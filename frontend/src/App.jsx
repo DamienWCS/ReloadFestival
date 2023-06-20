@@ -1,12 +1,13 @@
-import HomePage from "./pages/HomePage";
-
 import "./styles/App.scss";
+import NavBar from "./components/NavBar";
+import AppRoutes from "./routes/AppRoutes";
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <>
+      <NavBar />
+      <AppRoutes />
+    </>
   );
 }
 
