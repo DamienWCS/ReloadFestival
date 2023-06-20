@@ -1,6 +1,10 @@
 import React from "react";
 
 function Favorites() {
-  return <h1>Favorites</h1>;
+  return (
+    <div className="component">
+      <h1>Favorites</h1>
+    </div>
+  );
 }
 export default Favorites;

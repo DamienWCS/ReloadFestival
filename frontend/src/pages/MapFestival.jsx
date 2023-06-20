@@ -1,6 +1,10 @@
 import React from "react";
 
 function MapFestival() {
-  return <h1>MapFestival</h1>;
+  return (
+    <div className="component">
+      <h1>Map Festival</h1>
+    </div>
+  );
 }
 export default MapFestival;
