@@ -1,4 +1,3 @@
-
 import "./styles/App.scss";
 import NavBar from "./components/NavBar";
 import AppRoutes from "./routes/AppRoutes";
@@ -9,7 +8,6 @@ function App() {
       <NavBar />
       <AppRoutes />
     </>
-
   );
 }
 
