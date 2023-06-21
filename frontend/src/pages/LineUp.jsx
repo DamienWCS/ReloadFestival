@@ -1,3 +1,5 @@
+import "../styles/lineup.scss";
+
 function LineUp() {
   return (
     <div className="body">
