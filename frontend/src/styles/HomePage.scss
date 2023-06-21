@@ -31,6 +31,10 @@ p {
   margin: 0;
 }
 
+.main-artists {
+  display: flex;
+}
+
 $breakpoint-tablet: 768px;
 @media (min-width: $breakpoint-tablet) {
   img {
