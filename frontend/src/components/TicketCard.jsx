@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../styles/TicketCard.css";
+import "../styles/TicketCard.scss";
 
 function TicketCard({ ticketType, price, description, quantity, onClick }) {
   return (

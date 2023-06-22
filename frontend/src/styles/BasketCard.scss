@@ -1,0 +1,112 @@
+.basket-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 350px;
+  border-radius: 100px;
+  background: linear-gradient(120deg, #dccce7, #ffb79e);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2),
+    inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin: 25px 10px 10px; /* Updated margin-top to 40px */
+  transition: transform 0.5s, box-shadow 0.3s;
+  font-family: "Rubik";
+  text-align: center;
+}
+
+.basket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.basket-card.panier {
+  background: linear-gradient(120deg, #fdd6a7, #ebeef3);
+  color: #333333;
+  font-family: "Rubik";
+}
+
+.basket-header {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Rubik";
+}
+
+.basket-description {
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-family: "Rubik";
+}
+
+.basket-type {
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-family: "Rubik";
+}
+
+.basket-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: 1;
+  width: 100%;
+  font-family: "Rubik";
+}
+
+.basket-button {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  font-family: "Righteous";
+  padding: 4px 8px;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: background-color 0.5s, box-shadow 0.5s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1),
+    inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
+
+.basket-button:hover {
+  background-color: #c1b5b5;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  font-family: "Righteous";
+  transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.basket-card.saturday {
+  background: linear-gradient(120deg, #fdd6a7, #ebeef3);
+  color: #333333;
+}
+
+.basket-card.sunday {
+  background: linear-gradient(120deg, #f5f7fa, #c3d1e2);
+  color: #333333;
+}
+
+.basket-card.weekend {
+  background: linear-gradient(120deg, #ffefd5, #ffbe76);
+  color: #333333;
+}
+
+@media screen and (max-width: 767px) {
+  .basket-card {
+    width: calc(50% - 20px);
+    margin: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .basket-card {
+    width: calc(100% - 20px);
+  }
+}
+
+.basket-total-price {
+  margin-top: 10px;
+  font-family: "Rubik";
+}
