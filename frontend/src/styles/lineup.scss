@@ -4,11 +4,12 @@ padding: 0;
 box-sizing: border-box;
 }
 
-body{
-display: flex;
-flex-direction: column;
-align-items: center;
-}
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    }
+
 
 .lineup-block{
 display: flex;
@@ -19,13 +20,13 @@ align-items: center;
 
 h2{
 font-size: xx-large;
-
+font-family: "Righteous";
 }
 }
 
 .box-filter{
 display: grid;
-grid-template-columns: repeat(3);
+grid-template-columns: repeat(2);
 grid-template-rows: repeat(4);
 width: 100dvw;
 height: 200px;
@@ -39,6 +40,7 @@ input{
 }
 button{
     cursor: pointer;
+    font-family: "Rubik";
 }
 
 
@@ -56,13 +58,29 @@ button{
  }
 
 }
+.active-artistes {
+    border-radius: 15px;
+    border: none;
+    background-color: #c3a0d5; 
+    color: #fff; 
+  }
+  .active-saturday {
+    border-radius: 15px;
+    border: none;
+    background-color: #669bb0; 
+    color: #fff; 
+  }
+  .active-sunday {
+    border-radius: 15px;
+    border: none;
+    background-color: #ffa269; 
+    color: #fff; 
+  }
 
-.stage_content{
+.stage_content {
     width: 100dvw;
    
-   
-
-ul{
+    ul {
     display: flex;
     flex-wrap: wrap;
     margin-left: 20px;
@@ -71,14 +89,34 @@ ul{
     
 }
 li{
-    margin-right: 20px;
+    margin-right: 10px;
     margin-bottom: 10px;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid white;
+    font-family: "Rubik";
+    color: white;
+    cursor: pointer;
 }
 h4{
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 }
+
+@media screen and (min-width: 767px){
+    .body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .box-filter{
+        max-width: 650px;
+    }
+    .stage_content{
+        max-width: 650px;
+    
+    }
+   
+    }
 
