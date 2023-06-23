@@ -4,12 +4,13 @@
 }
 .logo-mobile {
   display: none;
-  margin: 0;
-  padding: 0;
+  
 }
 .img-logo-desk {
+  display: flex;
   width: 50px;
   height: 50px;
+  margin: 0;
 }
 
 .block-nav {
@@ -57,13 +58,11 @@
   display: none;
   color: inherit;
 }
-img {
-  margin: unset;
-}
+
 
 @media screen and (max-width: 767px) {
-  img {
-    margin: unset;
+  .img-logo-desk {
+    display: flex;
   }
   .component {
     margin-top: 0;
@@ -72,7 +71,6 @@ img {
     position: fixed;
     left: 0rem;
     top: 0rem;
-
     display: flex;
     height: 76px;
     width: 76px;
@@ -88,11 +86,13 @@ img {
     align-items: center;
     position: fixed;
     right: -100vw;
-    top: 0;
+    top: 3rem;
     width: 0;
     height: 55vh;
     padding: 1rem;
-    background-color: #700bb3;
+    background: linear-gradient(120deg, #8e7d9a, #ffb79e);
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5),
+    inset 0px 0px 8px rgba(0, 0, 0, 0.5);
     visibility: hidden;
     transition: all 0.6s ease-out;
     border-radius: 15px;
@@ -124,6 +124,7 @@ img {
     top: 1rem;
     right: 1rem;
     border-radius: 50%;
+    border: 2px solid #fff;
     width: 45px;
     height: 45px;
   }
@@ -135,12 +136,12 @@ img {
   .burgerBar::before,
   .burgerBar::after {
     display: flex;
-    width: 32px;
-    height: 3px;
-    left: 4px;
+    width: 20px;
+    height: 4px;
+    left: 11px;
     position: relative;
     border-radius: 3px;
-    background: #787878;
+    background: #fff;
     transition: all 0.3s ease-in-out;
   }
   .burgerBar::before,
@@ -150,10 +151,10 @@ img {
     left: 0;
   }
   .burgerBar::before {
-    transform: translateY(-12px);
+    transform: translateY(-8px);
   }
   .burgerBar::after {
-    transform: translateY(12px);
+    transform: translateY(8px);
   }
   .show-nav .burgerBar::before {
     transform: rotate(45deg);
