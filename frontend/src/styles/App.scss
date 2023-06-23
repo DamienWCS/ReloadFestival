@@ -24,12 +24,13 @@ h3 {
   background-image: url("../assets/Images/Background\ Image1.jpg");
   background-size: auto 100vh;
   background-position-x: center;
+  background-attachment: fixed;
 }
 
-$breakpoint-largeScreen: 768px;
+$breakpoint-largeScreen: 500px;
 @media (min-width: $breakpoint-largeScreen) {
   :root {
-    background-size: 100vw;
+    background-size: cover;
     background-position-y: center;
   }
 }
