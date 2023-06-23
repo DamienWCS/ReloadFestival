@@ -4,7 +4,6 @@
 }
 .logo-mobile {
   display: none;
-  
 }
 .img-logo-desk {
   display: flex;
@@ -59,7 +58,6 @@
   color: inherit;
 }
 
-
 @media screen and (max-width: 767px) {
   .img-logo-desk {
     display: flex;
@@ -92,7 +90,7 @@
     padding: 1rem;
     background: linear-gradient(120deg, #8e7d9a, #ffb79e);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5),
-    inset 0px 0px 8px rgba(0, 0, 0, 0.5);
+      inset 0px 0px 8px rgba(0, 0, 0, 0.5);
     visibility: hidden;
     transition: all 0.6s ease-out;
     border-radius: 15px;
