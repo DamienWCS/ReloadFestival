@@ -69,7 +69,6 @@ function Reservation() {
               .map((item) => `${item.ticket.name} x ${item.quantity}`)
               .join(", ")}
             totalPrice={totalPrice}
-            onClick={() => {}}
           />
         </div>
       )}
