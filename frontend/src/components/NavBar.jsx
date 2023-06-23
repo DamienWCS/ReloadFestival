@@ -33,6 +33,11 @@ function NavBar() {
               <h1>Line-Up</h1>
             </Link>
           </li>
+          <li className="nav-li">
+            <Link className="nav-link" to="/Schedule" onClick={handleShowLinks}>
+              <h1>Schedule</h1>
+            </Link>
+          </li>
           <li className="nav-li logo-desk">
             <Link className="nav-link" to="/" onClick={handleShowLinks}>
               <img
