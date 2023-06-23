@@ -88,8 +88,12 @@ function LineUp() {
 
   let artists;
   if (showAllArtists) {
-    artists = [...new Set(data.flatMap(({ artistes }) => artistes))].sort();
+    artists = [...new Set(data.flatMap(({ artistes }) => artistes))].sort(
+      (a, b) => a.localeCompare(b)
+    );
   }
+  const matchesFilter = (value, currentFilter) =>
+    currentFilter === "All" || value === currentFilter;
 
   return (
     <div className="body">
@@ -152,8 +156,8 @@ function LineUp() {
           : data
               .filter(
                 ({ day, stage }) =>
-                  (dayFilter === "All" || day === dayFilter) &&
-                  (stageFilter === "All" || stage === stageFilter)
+                  matchesFilter(day, dayFilter) &&
+                  matchesFilter(stage, stageFilter)
               )
               .map(({ stage, artistes }) => (
                 <div key={stage}>
