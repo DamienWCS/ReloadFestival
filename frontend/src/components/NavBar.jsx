@@ -19,6 +19,15 @@ function NavBar() {
       </div>
       <nav className={`navbar ${showLinks ? "show-nav" : "hide-nav"}`}>
         <ul className="nav-links">
+          <li className="nav-li logo-desk">
+            <Link className="nav-link" to="/" onClick={handleShowLinks}>
+              <img
+                className="img-logo-desk"
+                src="../src/assets/Images/LogoLR.png"
+                alt="Logo for desktop"
+              />
+            </Link>
+          </li>
           <li className="nav-li">
             <Link
               className="nav-link"
@@ -31,15 +40,6 @@ function NavBar() {
           <li className="nav-li">
             <Link className="nav-link" to="/lineup" onClick={handleShowLinks}>
               <h1>Line-Up</h1>
-            </Link>
-          </li>
-          <li className="nav-li logo-desk">
-            <Link className="nav-link" to="/" onClick={handleShowLinks}>
-              <img
-                className="img-logo-desk"
-                src="../src/assets/Images/LogoLR.png"
-                alt="Logo for desktop"
-              />
             </Link>
           </li>
           <li className="nav-li">
