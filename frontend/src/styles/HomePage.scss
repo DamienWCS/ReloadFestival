@@ -19,9 +19,9 @@ h1 {
   align-items: center;
 }
 
-img {
+.coverImg {
   width: 80%;
-  margin: 1em 0 2em 0;
+  margin: 1em 0 1em 0;
 }
 
 p {
@@ -31,23 +31,68 @@ p {
   margin: 0;
 }
 
+.scrollBox {
+  width: 350px;
+  height: 30vh;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
 .main-artists {
   display: flex;
+  align-items: center;
+  justify-content: start;
+  height: 30vh;
+  margin: 1em;
+}
+
+.main-artists::-webkit-scrollbar {
+  display: none;
+}
+
+.icon {
+  color: white;
+  font-size: 30px;
 }
 
 $breakpoint-tablet: 768px;
+$breakpoint-desktop: 1300px;
+
 @media (min-width: $breakpoint-tablet) {
-  img {
-    width: 50%;
+  .coverImg {
+    width: 45%;
   }
   h1 {
-    font-size: 4.5em;
+    font-size: 3.5em;
   }
   .info {
     width: 50%;
   }
   p {
-    font-size: 1.4em;
+    font-size: 1em;
+    width: 25%;
+  }
+
+  .scrollBox {
+    width: 600px;
+  }
+}
+
+@media (min-width: $breakpoint-desktop) {
+  .scrollBox {
+    width: 900px;
+  }
+  .coverImg {
+    width: 40%;
+  }
+  h1 {
+    font-size: 4em;
+  }
+  .info {
+    width: 50%;
+  }
+  p {
+    font-size: 1.5em;
     width: 25%;
   }
 }
