@@ -1,45 +1,77 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import TicketCard from "../components/TicketCard";
 import BasketCard from "../components/BasketCard";
+
+const TICKETS_DATA = [
+  {
+    id: 1,
+    name: "Saturday",
+    price: 40,
+    description: "Ton pass pour la journée de Samedi!",
+  },
+  {
+    id: 2,
+    name: "Sunday",
+    price: 50,
+    description: "Ton pass pour la journée de dimanche!",
+  },
+  {
+    id: 3,
+    name: "Weekend",
+    price: 80,
+    description: "Ton pass pour le week-end entier!",
+  },
+];
 
 function Reservation() {
   const [cartItems, setCartItems] = useState([]);
 
-  const addToCart = (ticket) => {
-    const existingItem = cartItems.find((item) => item.ticket.id === ticket.id);
+  // Chargement du panier à partir du stockage local lors du chargement de la page
+  useEffect(() => {
+    const storedCartItems = localStorage.getItem("cartItems");
 
-    if (existingItem) {
-      const updatedCartItems = cartItems.map((item) =>
-        item.ticket.id === ticket.id
-          ? { ticket, quantity: item.quantity + 1 }
-          : item
-      );
+    if (storedCartItems) {
+      setCartItems(JSON.parse(storedCartItems));
+    }
+  }, []);
+
+  // Sauvegarde du panier dans le stockage local chaque fois qu'il est mis à jour
+  useEffect(() => {
+    if (cartItems.length) {
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
+  }, [cartItems]);
+
+  const addToCart = (ticket) => {
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.ticket.id === ticket.id
+    );
+
+    if (existingItemIndex !== -1) {
+      const updatedCartItems = [...cartItems];
+      updatedCartItems[existingItemIndex].quantity += 1;
       setCartItems(updatedCartItems);
     } else {
       setCartItems([...cartItems, { ticket, quantity: 1 }]);
     }
   };
 
-  const ticketData = [
-    {
-      id: 2,
-      name: "Saturday",
-      price: 40,
-      description: "Ton pass pour la journée de Samedi!",
-    },
-    {
-      id: 3,
-      name: "Sunday",
-      price: 50,
-      description: "Ton pass pour la journée de dimanche!",
-    },
-    {
-      id: 4,
-      name: "Weekend",
-      price: 80,
-      description: "Ton pass pour le week-end entier!",
-    },
-  ];
+  const removeFromCart = (ticketId) => {
+    const existingItemIndex = cartItems.findIndex(
+      (item) => item.ticket.id === ticketId
+    );
+
+    if (existingItemIndex !== -1) {
+      const updatedCartItems = [...cartItems];
+      updatedCartItems[existingItemIndex].quantity -= 1;
+
+      if (updatedCartItems[existingItemIndex].quantity === 0) {
+        updatedCartItems.splice(existingItemIndex, 1);
+      }
+
+      setCartItems(updatedCartItems);
+    }
+  };
 
   const totalPrice = cartItems.reduce(
     (total, item) => total + item.ticket.price * item.quantity,
@@ -48,7 +80,7 @@ function Reservation() {
 
   return (
     <div className="cart">
-      {ticketData.map((ticket) => (
+      {TICKETS_DATA.map((ticket) => (
         <TicketCard
           key={ticket.id}
           ticketType={ticket.name}
@@ -65,10 +97,10 @@ function Reservation() {
         <div className="cart-content">
           <BasketCard
             ticketType="Panier"
-            description={cartItems
-              .map((item) => `${item.ticket.name} x ${item.quantity}`)
-              .join(", ")}
+            tickets={cartItems}
             totalPrice={totalPrice}
+            onRemove={removeFromCart}
+            onAdd={addToCart}
           />
         </div>
       )}
