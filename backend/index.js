@@ -58,6 +58,23 @@ app.get("/artist/:id", async (req, res) => {
   }
 });
 
+app.get("/name/:name", async (req, res) => {
+  const { name } = req.params;
+  const sql = "SELECT * FROM artists_descriptions WHERE name= ?";
+
+  try {
+    const [artist] = await pool.query(sql, name);
+    if (artist.length) {
+      res.send(artist);
+    } else {
+      res.sendStatus(404);
+    }
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
+  }
+});
+
 app.listen(port, (err) => {
   if (err) {
     console.error("Something bad happened");
