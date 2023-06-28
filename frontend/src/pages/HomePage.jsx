@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 import FetchArtists from "../components/FetchArtists";
 import MainArtistCard from "../components/MainArtistCard";
+import ArtistDescription from "../components/ArtistDescription";
+
 import "../styles/HomePage.scss";
 
 function HomePage() {
@@ -76,6 +78,7 @@ function HomePage() {
           </div>
         )}
       </div>
+      <ArtistDescription />
     </div>
   );
 }

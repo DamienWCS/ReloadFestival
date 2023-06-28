@@ -1,0 +1,104 @@
+.descriptionCard {
+  width: 90%;
+  height: 70vh;
+  border: solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("../assets/Images/Background\ Image1.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.artistName {
+  height: 8%;
+  font-size: 1.5em;
+}
+.informations {
+  display: flex;
+  flex-direction: column;
+  height: 92%;
+  align-items: center;
+}
+
+.showDetails {
+  height: 5%;
+  margin-bottom: 0.5em;
+}
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 95%;
+}
+.photo {
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ArtistPhoto {
+  height: 90%;
+}
+.origin {
+  height: 8%;
+  margin-top: 0.5em;
+}
+.showDetails {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.description {
+  width: 90%;
+  height: 30%;
+  overflow: scroll;
+  margin: 1em;
+}
+
+$breakpoint-tablet: 768px;
+@media (min-width: $breakpoint-tablet) {
+  .descriptionCard {
+    width: 60vw;
+    height: 60vh;
+  }
+  .artistName {
+    font-size: 3em;
+  }
+  .origin {
+    font-size: 1.5em;
+  }
+  .informations {
+    width: 100%;
+  }
+  .showDetails {
+    width: 70%;
+    height: 10%;
+    align-items: center;
+    justify-content: center;
+  }
+  .details {
+    flex-direction: row;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+  }
+  .photo {
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+  }
+  .ArtistPhoto {
+    width: 80%;
+    height: auto;
+  }
+  .description {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    margin-left: 1em;
+  }
+}
