@@ -1,8 +1,81 @@
+const express = require("express");
 require("dotenv").config();
+const mysql = require("mysql2/promise");
+
+const { APP_PORT, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } =
+  process.env;
 
 const app = require("./src/app");
 
-const port = parseInt(process.env.APP_PORT ?? "6000", 10);
+const port = parseInt(APP_PORT ?? "6000", 10);
+
+app.use(express.json());
+
+const createPoolInstance = () => {
+  try {
+    const pool = mysql.createPool({
+      host: DB_HOST,
+      port: DB_PORT,
+      user: DB_USER,
+      password: DB_PASSWORD,
+      database: DB_NAME,
+      waitForConnections: true,
+    });
+    return pool;
+  } catch (err) {
+    console.error(err);
+    throw err;
+  }
+};
+const pool = createPoolInstance();
+
+app.get("/artists", async (req, res) => {
+  const sql = "SELECT * FROM artists_descriptions;";
+
+  try {
+    const [artists] = await pool.query(sql);
+    res.send(artists);
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
+  }
+});
+
+app.get("/artist/:id", async (req, res) => {
+  const { id } = req.params;
+  const sql = "SELECT * FROM artists_descriptions WHERE id= ?";
+
+  try {
+    const [artist] = await pool.query(sql, parseInt(id, 10));
+    if (artist.length) {
+      res.send(artist);
+    } else {
+      res.sendStatus(404);
+    }
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
+  }
+});
+
+app.get("artist/2", async (req, res) => {
+  // const { id } = parseInt(req.params, 10);
+  const sql = "SELECT * FROM artists_descriptions WHERE id=2;";
+
+  try {
+    const [artist] = await pool.query(sql);
+    // const artist = await pool.query(sql, [id]);
+    res.send(artist);
+    // if (artist != null) {
+    //   res.send(artist);
+    // } else {
+    //   res.sendStatus(404);
+    // }
+  } catch (err) {
+    console.error(err);
+    res.sendStatus(500);
+  }
+});
 
 app.listen(port, (err) => {
   if (err) {
