@@ -58,25 +58,6 @@ app.get("/artist/:id", async (req, res) => {
   }
 });
 
-app.get("artist/2", async (req, res) => {
-  // const { id } = parseInt(req.params, 10);
-  const sql = "SELECT * FROM artists_descriptions WHERE id=2;";
-
-  try {
-    const [artist] = await pool.query(sql);
-    // const artist = await pool.query(sql, [id]);
-    res.send(artist);
-    // if (artist != null) {
-    //   res.send(artist);
-    // } else {
-    //   res.sendStatus(404);
-    // }
-  } catch (err) {
-    console.error(err);
-    res.sendStatus(500);
-  }
-});
-
 app.listen(port, (err) => {
   if (err) {
     console.error("Something bad happened");
