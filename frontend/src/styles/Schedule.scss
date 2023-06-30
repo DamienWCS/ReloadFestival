@@ -1,13 +1,22 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/Fonts/Rubik-Regular.ttf");
+}
+
 .schedule {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+h1 {
+  font-size: 3em;
+}
+
 .day {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 90%;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
   gap: 2em;
   margin-bottom: 2em;
 }
@@ -29,12 +38,22 @@ h3 {
   justify-content: space-between;
 }
 .artist {
-  width: 70%;
+  width: 60%;
   text-align: left;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  font-family: "Rubik";
+  color: white;
+  font-size: 1em;
 }
 .showTime {
-  width: 30%;
-  text-align: right;
+  width: 40%;
+  text-align: center;
+}
+
+.popUp {
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
 }
 
 $breakpoint-tablet: 768px;
@@ -42,11 +61,42 @@ $breakpoint-desktop: 1300px;
 
 @media (min-width: $breakpoint-tablet) {
   .day {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 60%;
+    gap: 2em;
+    margin-bottom: 2em;
+  }
+  h1 {
+    font-size: 3.5em;
+  }
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .artist {
+    font-size: 1.5em;
   }
 }
 @media (min-width: $breakpoint-desktop) {
   .day {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 50%;
+    gap: 4em;
+    margin-bottom: 3em;
+    margin-top: 1em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+  h3 {
+    font-size: 1.5em;
+  }
+  .artist {
+    font-size: 1.5em;
   }
 }

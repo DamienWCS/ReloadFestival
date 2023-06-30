@@ -43,6 +43,11 @@ function NavBar() {
             </Link>
           </li>
           <li className="nav-li">
+            <Link className="nav-link" to="/schedule" onClick={handleShowLinks}>
+              <h1>Horaire</h1>
+            </Link>
+          </li>
+          <li className="nav-li">
             <Link
               className="nav-link"
               to="/reservation"
