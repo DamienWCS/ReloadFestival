@@ -52,7 +52,7 @@ function Review() {
         <div className={styles["review-stars"]}>
           {[...Array(5)].map((_, i) => (
             <button
-              className={styles[`star ${i < stars ? "active" : ""}`]}
+              className={`${styles.star} ${i < stars ? styles.active : ""}`}
               type="submit"
               key={generateUniqueId()}
               onClick={() => handleStarClick(i + 1)}
@@ -78,13 +78,9 @@ function Review() {
               {[...Array(5)].map((_, j) => (
                 <span
                   key={generateUniqueId()}
-                  className={
-                    styles[
-                      `star ${
-                        j < review.stars ? getStarColorClass(review.stars) : ""
-                      }`
-                    ]
-                  }
+                  className={`${styles.star} ${
+                    j < review.stars ? getStarColorClass(review.stars) : ""
+                  }`}
                 >
                   {j < review.stars ? "★" : "☆"}
                 </span>

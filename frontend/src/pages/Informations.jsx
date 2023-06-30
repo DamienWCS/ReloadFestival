@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../styles/informations.module.scss";
+import styles from "../styles/Informations.module.scss";
 
 function Informations() {
   return (
@@ -17,7 +17,7 @@ function Informations() {
             d'accès...
           </li>
           <li>
-            Interdiction de drogues et d'alcool : Le Reloard Festival se veut un
+            Interdiction de drogues et d'alcool : Le Reload Festival se veut un
             événement familial...
           </li>
           <li>
