@@ -1,15 +1,21 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../styles/TicketCard.scss";
+import styles from "../styles/TicketCard.module.scss";
 
 function TicketCard({ ticketType, price, description, quantity, onClick }) {
   return (
-    <div className={`ticket-card ${ticketType.toLowerCase()}`}>
-      <div className="ticket-type">{ticketType}</div>
-      <div className="ticket-price">Prix : {price} €</div>
-      {quantity && <div className="ticket-quantity">Quantité : {quantity}</div>}
-      <div className="ticket-description">{description}</div>
-      <button className="ticket-button" type="button" onClick={onClick}>
+    <div className={styles[`ticket-card ${ticketType.toLowerCase()}`]}>
+      <div className={styles["ticket-type"]}>{ticketType}</div>
+      <div className={styles["ticket-price"]}>Prix : {price} €</div>
+      {quantity && (
+        <div className={styles["ticket-quantity"]}>Quantité : {quantity}</div>
+      )}
+      <div className={styles["ticket-description"]}>{description}</div>
+      <button
+        className={styles["ticket-button"]}
+        type="button"
+        onClick={onClick}
+      >
         Ajouter au panier
       </button>
     </div>

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../styles/lineup.scss";
+import styles from "../styles/lineup.module.scss";
 
 function LineUp() {
   const [filter, setFilter] = useState("");
@@ -96,29 +96,29 @@ function LineUp() {
     currentFilter === "All" || value === currentFilter;
 
   return (
-    <div className="body">
-      <div className="lineup-block">
+    <div className={styles.body}>
+      <div className={styles["lineup-block"]}>
         <h2>LINEUP</h2>
       </div>
-      <div className="box-filter">
+      <div className={styles["box-filter"]}>
         <input
-          className="input"
+          className={styles.input}
           type="search"
           placeholder="Nom de l' artiste"
           value={filter}
           onChange={(e) => setFilter(e.target.value)}
         />
         <button
-          className={`button-artistes ${
-            showAllArtists ? "active-artistes" : ""
-          }`}
+          className={
+            styles[`button-artistes ${showAllArtists ? "active-artistes" : ""}`]
+          }
           type="submit"
           onClick={handleAllArtists}
         >
           Artistes
         </button>
         <select
-          className="button-stage"
+          className={styles["button-stage"]}
           onChange={(e) => setStageFilter(e.target.value)}
         >
           <option value="All">All Stages</option>
@@ -128,25 +128,29 @@ function LineUp() {
           <option value="Stage 4">Stage 4</option>
         </select>
         <button
-          className={`button-day ${
-            dayFilter === "Saturday" ? "active-saturday" : ""
-          }`}
+          className={
+            styles[
+              `button-day ${dayFilter === "Saturday" ? "active-saturday" : ""}`
+            ]
+          }
           type="submit"
           onClick={() => handleDayFilter("Saturday")}
         >
           Saturday
         </button>
         <button
-          className={`button-day ${
-            dayFilter === "Sunday" ? "active-sunday" : ""
-          }`}
+          className={
+            styles[
+              `button-day ${dayFilter === "Sunday" ? "active-sunday" : ""}`
+            ]
+          }
           type="submit"
           onClick={() => handleDayFilter("Sunday")}
         >
           Sunday
         </button>
       </div>
-      <div className="stage_content">
+      <div className={styles.stage_content}>
         {showAllArtists
           ? artists
               .filter((artist) =>

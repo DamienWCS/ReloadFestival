@@ -5,7 +5,7 @@ import styles from "../styles/Button.module.scss";
 function Button({ onClick, label }) {
   return (
     <button type="button" className={styles.button} onClick={onClick}>
-      npm {label}
+      {label}
     </button>
   );
 }

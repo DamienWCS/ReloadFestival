@@ -28,7 +28,7 @@ function Informations() {
           <li>Sécurité : La sécurité des festivaliers est notre priorité...</li>
         </ul>
       </div>
-      <div className="sheet">
+      <div className={styles.sheet}>
         <h2>Règle du badge d'accès aux boissons</h2>
         <ul>
           <li>
@@ -69,7 +69,7 @@ function Informations() {
           </li>
         </ul>
       </div>
-      <div className="sheet">
+      <div className={styles.sheet}>
         <h2>Histoire du Reload Festival</h2>
         <ul>
           <li>

@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 
 import FetchArtists from "../components/FetchArtists";
 import MainArtistCard from "../components/MainArtistCard";
-
-import "../styles/HomePage.scss";
+import styles from "../styles/HomePage.module.scss";
 
 function HomePage() {
   const artists = FetchArtists();
@@ -46,22 +45,22 @@ function HomePage() {
   }, []);
 
   return (
-    <div className="home-page">
+    <div className={styles["home-page"]}>
       <h1>Reload Fest</h1>
-      <div className="info">
+      <div className={styles.info}>
         <p>19 & 20th August 2023</p>
         <p>Les Minimes</p>
         <p>Larochelle</p>
       </div>
       <img
-        className="coverImg"
+        className={styles.coverImg}
         src="https://images.unsplash.com/photo-1582711012124-a56cf82307a0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1240&q=80"
         alt="Crowd in front of a stage"
       />
-      <div className="scrollBox">
+      <div className={styles.scrollBox}>
         {artists.length > 0 && (
           <div
-            className="main-artists"
+            className={styles["main-artists"]}
             style={{
               transform: `translateX(-${currentImageIndex * 200}px)`,
               transition: "transform 2s",

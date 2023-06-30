@@ -6,21 +6,27 @@ import Button from "./Button";
 function BasketCard({ ticketType, tickets, totalPrice, onRemove, onAdd }) {
   return (
     <div className={styles["basket-card"]}>
-      <div className="basket-header">
+      <div className={styles["basket-header"]}>
         <h2>{ticketType}</h2>
       </div>
-      <div className="basket-items">
+      <div className={styles["basket-items"]}>
         {tickets.map((ticket) => (
-          <div className="basket-item">
-            <div className="basket-item-name">{ticket.ticket.name}</div>
-            <div className="basket-item-quantity">x{ticket.quantity}</div>
+          <div className={styles["basket-item"]}>
+            <div className={styles["basket-item-name"]}>
+              {ticket.ticket.name}
+            </div>
+            <div className={styles["basket-item-quantity"]}>
+              x{ticket.quantity}
+            </div>
             <Button onClick={() => onRemove(ticket.ticket.id)} label="-" />
             <Button onClick={() => onAdd(ticket.ticket)} label="+" />
           </div>
         ))}
       </div>
-      <div className="basket-total-price">Prix total : {totalPrice} €</div>
-      <button type="button" className="basket-button">
+      <div className={styles["basket-total-price"]}>
+        Prix total : {totalPrice} €
+      </div>
+      <button type="button" className={styles["basket-button"]}>
         commande ton ticket !
       </button>
     </div>
