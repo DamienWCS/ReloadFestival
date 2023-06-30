@@ -5,10 +5,10 @@ import "./styles/App.scss";
 
 function App() {
   return (
-    <>
+    <div>
       <NavBar />
       <AppRoutes />
-    </>
+    </div>
   );
 }
 
