@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Review.scss";
+import styles from "../styles/Review.module.scss";
 
 const generateUniqueId = () =>
   Math.random().toString(36).substring(2, 15) +
@@ -45,14 +45,14 @@ function Review() {
   };
 
   return (
-    <div className="review-container">
+    <div className={styles["review-container"]}>
       <h2>Donne-nous ton avis</h2>
       <div>
         <textarea value={input} onChange={(e) => setInput(e.target.value)} />
-        <div className="review-stars">
+        <div className={styles["review-stars"]}>
           {[...Array(5)].map((_, i) => (
             <button
-              className={`star ${i < stars ? "active" : ""}`}
+              className={styles[`star ${i < stars ? "active" : ""}`]}
               type="submit"
               key={generateUniqueId()}
               onClick={() => handleStarClick(i + 1)}
@@ -61,22 +61,30 @@ function Review() {
             </button>
           ))}
         </div>
-        <button className="review-submit" type="submit" onClick={handleSubmit}>
+        <button
+          className={styles["review-submit"]}
+          type="submit"
+          onClick={handleSubmit}
+        >
           Soumettre mon avis
         </button>
       </div>
-      <div className="review-comments">
+      <div className={styles["review-comments"]}>
         {[...reviews]
           .reverse()
           .map((review) => (
             <div key={review.id}>
-              <div className="comment">{review.text}</div>
+              <div className={styles.comment}>{review.text}</div>
               {[...Array(5)].map((_, j) => (
                 <span
                   key={generateUniqueId()}
-                  className={`star ${
-                    j < review.stars ? getStarColorClass(review.stars) : ""
-                  }`}
+                  className={
+                    styles[
+                      `star ${
+                        j < review.stars ? getStarColorClass(review.stars) : ""
+                      }`
+                    ]
+                  }
                 >
                   {j < review.stars ? "★" : "☆"}
                 </span>

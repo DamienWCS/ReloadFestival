@@ -1,12 +1,12 @@
 import Proptypes from "prop-types";
 
-import "../styles/MainArtistCard.scss";
+import styles from "../styles/MainArtistCard.module.scss";
 
 function MainArtistCard({ name, src, id }) {
   return (
-    <div key={id} className="mainArtistCard">
-      {name && <h1 className="artistName">{name}</h1>}
-      {src && <img className="mainArtistPhoto" src={src} alt={name} />}
+    <div key={id} className={styles.mainArtistCard}>
+      {name && <h1 className={styles.artistName}>{name}</h1>}
+      {src && <img className={styles.mainArtistPhoto} src={src} alt={name} />}
     </div>
   );
 }
