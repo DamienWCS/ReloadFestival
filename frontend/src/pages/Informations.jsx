@@ -1,11 +1,11 @@
 import React from "react";
 
-import "../styles/informations.scss";
+import styles from "../styles/informations.module.scss";
 
 function Informations() {
   return (
     <div>
-      <div className="sheet">
+      <div className={styles.sheet}>
         <h2>Règles du festival</h2>
         <ul>
           <li>

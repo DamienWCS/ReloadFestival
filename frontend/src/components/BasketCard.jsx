@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../styles/BasketCard.scss";
+import styles from "../styles/BasketCard.module.scss";
 import Button from "./Button";
 
 function BasketCard({ ticketType, tickets, totalPrice, onRemove, onAdd }) {
   return (
-    <div className="basket-card">
+    <div className={styles["basket-card"]}>
       <div className="basket-header">
         <h2>{ticketType}</h2>
       </div>

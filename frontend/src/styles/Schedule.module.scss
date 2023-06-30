@@ -50,6 +50,7 @@ h3 {
 .showTime {
   width: 40%;
   text-align: center;
+  font-size: 1em;
 }
 
 .popUp {
@@ -79,6 +80,9 @@ $breakpoint-desktop: 1300px;
   .artist {
     font-size: 1.5em;
   }
+  .showTime {
+    font-size: 1.5em;
+  }
 }
 @media (min-width: $breakpoint-desktop) {
   .day {
@@ -97,6 +101,9 @@ $breakpoint-desktop: 1300px;
     font-size: 1.5em;
   }
   .artist {
+    font-size: 1.5em;
+  }
+  .showTime {
     font-size: 1.5em;
   }
 }

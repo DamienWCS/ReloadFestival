@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-import "../styles/Schedule.scss";
+import styles from "../styles/Schedule.module.scss";
 import ArtistDescription from "../components/ArtistDescription";
 
 function Schedule() {
@@ -37,13 +37,13 @@ function Schedule() {
 
   return (
     <>
-      <div className="schedule">
+      <div className={styles.schedule}>
         <h1>Horaire</h1>
         {days.map((day) => (
-          <div className="day" key={day}>
+          <div className={styles.day} key={day}>
             <h2>{day}</h2>
             {stages.map((stage) => (
-              <div className="scene" key={stage}>
+              <div className={styles.scene} key={stage}>
                 <h3>{stage}</h3>
                 {artistDatas
                   .filter((item) => item.day === day && item.stage === stage)
@@ -51,10 +51,10 @@ function Schedule() {
                     return parseFloat(a.hour) - parseFloat(b.hour);
                   })
                   .map((el) => (
-                    <div className="show" key={el.id}>
-                      <p className="showTime">{el.hour}</p>
+                    <div className={styles.show} key={el.id}>
+                      <p className={styles.showTime}>{el.hour}</p>
                       <button
-                        className="artist"
+                        className={styles.artist}
                         onClick={togglePopUp}
                         onKeyDown={togglePopUp}
                         type="button"
@@ -70,8 +70,8 @@ function Schedule() {
       </div>
 
       {popUp && (
-        <div className="popUp">
-          <div className="overlay" />
+        <div className={styles.popUp}>
+          <div className={styles.overlay} />
           <ArtistDescription
             togglePopUp={togglePopUp}
             artistSelected={artistSelected}

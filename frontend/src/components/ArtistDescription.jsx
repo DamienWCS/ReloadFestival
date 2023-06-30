@@ -5,7 +5,7 @@ import axios from "axios";
 
 import FetchArtists from "./FetchArtists";
 
-import "../styles/ArtistDescription.scss";
+import styles from "../styles/ArtistDescription.module.scss";
 
 function ArtistDescription({ togglePopUp, artistSelected }) {
   // Récupérer les infos depuis l'API reload_festival.sql:
@@ -32,48 +32,56 @@ function ArtistDescription({ togglePopUp, artistSelected }) {
   };
 
   return (
-    <div className="popUp">
+    <div className={styles.popUp}>
       {artistSelectedData && reloadArtistData.length > 0 && (
         <>
           <div
-            className="overlay"
+            className={styles.overlay}
             role="button"
             onClick={togglePopUp}
             onKeyDown={togglePopUp}
             aria-label="Hide pop-up"
             tabIndex={0}
           />
-          <div className="descriptionCard">
+          <div className={styles.descriptionCard}>
             {artists.length > 0 && reloadArtistData.length > 0 && (
               <>
-                <h1 className="artist_name">{artistSelectedData.name}</h1>
+                <h1 className={styles.artist_name}>
+                  {artistSelectedData.name}
+                </h1>
                 <AiFillCloseCircle
-                  className="closeButton"
+                  className={styles.closeButton}
                   onClick={togglePopUp}
                 />
                 <AiFillStar
-                  className={isFavorites ? "starActive" : "starInactive"}
+                  className={
+                    isFavorites ? styles.starActive : styles.starInactive
+                  }
                   onClick={addFavourite}
                 />
-                <div className="informations">
-                  <div className="showDetails">
-                    <p className="jour">{reloadArtistData[0].day}</p>
-                    <p className="heure">{reloadArtistData[0].hour}</p>
-                    <p className="scène">{reloadArtistData[0].stage}</p>
+                <div className={styles.informations}>
+                  <div className={styles.showDetails}>
+                    <p className={styles.jour}>{reloadArtistData[0].day}</p>
+                    <p className={styles.heure}>{reloadArtistData[0].hour}</p>
+                    <p className={styles["scène"]}>
+                      {reloadArtistData[0].stage}
+                    </p>
                   </div>
-                  <div className="details">
-                    <div className="photo">
+                  <div className={styles.details}>
+                    <div className={styles.photo}>
                       <img
-                        className="ArtistPhoto"
+                        className={styles.ArtistPhoto}
                         src={artistSelectedData.images[1].url}
                         alt="name"
                       />
-                      <h3 className="real_name">
+                      <h3 className={styles.real_name}>
                         {reloadArtistData[0].real_name}
                       </h3>
-                      <h3 className="origin">{reloadArtistData[0].origin}</h3>
+                      <h3 className={styles.origin}>
+                        {reloadArtistData[0].origin}
+                      </h3>
                     </div>
-                    <p className="description">
+                    <p className={styles.description}>
                       {reloadArtistData[0].description}
                     </p>
                   </div>

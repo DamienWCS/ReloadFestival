@@ -1,11 +1,11 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "../styles/Button.scss";
+import styles from "../styles/Button.module.scss";
 
 function Button({ onClick, label }) {
   return (
-    <button type="button" className="button" onClick={onClick}>
-      {label}
+    <button type="button" className={styles.button} onClick={onClick}>
+      npm {label}
     </button>
   );
 }
