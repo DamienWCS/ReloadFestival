@@ -10,7 +10,7 @@ function LineUp() {
   const data = [
     {
       day: "Saturday",
-      stage: "Stage 1",
+      stage: "Flying High",
       artistes: [
         "Armin van Buuren",
         "Calvin Harris",
@@ -26,7 +26,7 @@ function LineUp() {
     },
     {
       day: "Saturday",
-      stage: "Stage 2",
+      stage: "Sonic Sphere",
       artistes: [
         "Afrojack",
         "Benni Benassi",
@@ -36,13 +36,13 @@ function LineUp() {
         "Excision",
         "Deadmau5",
         "Dr Peacock",
-        "Charlotte de White",
+        "Charlotte de Witte",
         "DJ Snake",
       ],
     },
     {
       day: "Sunday",
-      stage: "Stage 3",
+      stage: "Electronic Dawn",
       artistes: [
         "Dash Berlin",
         "Nora En Pure",
@@ -58,7 +58,7 @@ function LineUp() {
     },
     {
       day: "Sunday",
-      stage: "Stage 4",
+      stage: "Sunset Stage",
       artistes: [
         "Sound of Legend",
         "Da Tweekaz",

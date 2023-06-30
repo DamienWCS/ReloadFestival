@@ -7,7 +7,7 @@ const { APP_PORT, DB_HOST, DB_PORT, DB_USER, DB_PASSWORD, DB_NAME } =
 
 const app = require("./src/app");
 
-const port = parseInt(APP_PORT ?? "6000", 10);
+const port = parseInt(APP_PORT ?? "8000", 10);
 
 app.use(express.json());
 

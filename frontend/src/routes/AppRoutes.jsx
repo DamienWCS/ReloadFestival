@@ -8,6 +8,7 @@ import Reservation from "../pages/Reservation";
 import MapFestival from "../pages/MapFestival";
 import Favorites from "../pages/Favorites";
 import FestivalNotFound from "../pages/FestivalNotFound";
+import Review from "../pages/Review";
 
 function AppRoutes() {
   return (
@@ -19,6 +20,7 @@ function AppRoutes() {
       <Route path="/reservation" element={<Reservation />} />
       <Route path="/map/" element={<MapFestival />} />
       <Route path="/favoris/" element={<Favorites />} />
+      <Route path="/review/" element={<Review />} />
       <Route path="*" element={<FestivalNotFound />} />
     </Routes>
   );
