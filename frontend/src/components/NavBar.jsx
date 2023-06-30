@@ -50,12 +50,15 @@ function NavBar() {
               <h1>Line-Up</h1>
             </Link>
           </li>
-          <li className="nav-li">
-            <Link className="nav-link" to="/schedule" onClick={handleShowLinks}>
+          <li className={styles["nav-li"]}>
+            <Link
+              className={styles["nav-link"]}
+              to="/schedule"
+              onClick={handleShowLinks}
+            >
               <h1>Horaire</h1>
             </Link>
           </li>
-          <li className="nav-li">
           <li className={styles["nav-li"]}>
             <Link
               className={styles["nav-link"]}
