@@ -46,7 +46,7 @@ function Review() {
 
   return (
     <div className="review-container">
-      <h2>Add your review</h2>
+      <h2>Donne-nous ton avis</h2>
       <div>
         <textarea value={input} onChange={(e) => setInput(e.target.value)} />
         <div className="review-stars">
