@@ -1,6 +1,4 @@
-
-
-h2:hover {
+.titre:hover {
   background-color: #e38ebe;
   transform: scale(1.02);
 }
@@ -13,7 +11,7 @@ h2:hover {
   width: 75%;
   margin: auto;
   margin-bottom: 1.5rem;
-  h2 {
+  .titre {
     color: #655e5e;
     border-radius: 5px;
     margin-bottom: 20px;

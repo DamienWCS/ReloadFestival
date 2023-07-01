@@ -6,7 +6,7 @@ function Informations() {
   return (
     <div>
       <div className={styles.sheet}>
-        <h2>Règles du festival</h2>
+        <h2 className={styles.titre}>Règles du festival</h2>
         <ul>
           <li>
             Âge minimum : Le festival est réservé aux personnes âgées de 18 ans
@@ -29,7 +29,7 @@ function Informations() {
         </ul>
       </div>
       <div className={styles.sheet}>
-        <h2>Règle du badge d'accès aux boissons</h2>
+        <h2 className={styles.titre}>Règle du badge d'accès aux boissons</h2>
         <ul>
           <li>
             Badge d'accès : Un badge spécial sera délivré à chaque participant
@@ -70,7 +70,7 @@ function Informations() {
         </ul>
       </div>
       <div className={styles.sheet}>
-        <h2>Histoire du Reload Festival</h2>
+        <h2 className={styles.titre}>Histoire du Reload Festival</h2>
         <ul>
           <li>
             Laissez-moi vous plonger dans l'histoire captivante du Reload

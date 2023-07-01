@@ -38,13 +38,13 @@ function Schedule() {
   return (
     <>
       <div className={styles.schedule}>
-        <h1>Horaire</h1>
+        <h1 className={styles.titre}>Horaire</h1>
         {days.map((day) => (
           <div className={styles.day} key={day}>
-            <h2>{day}</h2>
+            <h2 className={styles.show_day}>{day}</h2>
             {stages.map((stage) => (
               <div className={styles.scene} key={stage}>
-                <h3>{stage}</h3>
+                <h3 className={styles.stage}>{stage}</h3>
                 {artistDatas
                   .filter((item) => item.day === day && item.stage === stage)
                   .sort((a, b) => {

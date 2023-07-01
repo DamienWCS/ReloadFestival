@@ -43,7 +43,7 @@ function Review() {
 
   return (
     <div className={styles["review-container"]}>
-      <h2>Donne-nous ton avis</h2>
+      <h2 className={styles.titre}>Donne-nous ton avis</h2>
       <div>
         <textarea value={input} onChange={(e) => setInput(e.target.value)} />
         <div className={styles["review-stars"]}>

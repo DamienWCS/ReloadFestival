@@ -46,11 +46,11 @@ function HomePage() {
 
   return (
     <div className={styles["home-page"]}>
-      <h1>Reload Fest</h1>
+      <h1 className={styles.titre}>Reload Fest</h1>
       <div className={styles.info}>
-        <p>19 & 20th August 2023</p>
-        <p>Les Minimes</p>
-        <p>Larochelle</p>
+        <p className={styles.details}>19 & 20th August 2023</p>
+        <p className={styles.details}>Les Minimes</p>
+        <p className={styles.details}>Larochelle</p>
       </div>
       <img
         className={styles.coverImg}
