@@ -1,17 +1,4 @@
-h2 {
-  color: #655e5e;
-  border-radius: 5px;
-  margin-bottom: 20px;
-  padding: 10px;
-  box-shadow: inset 0 0 10px rgba(255, 162, 105, 0.5);
-  font-family: "Rubik", sans-serif;
-  background: linear-gradient(
-    120deg,
-    #ecb0d6 0%,
-    rgba(235, 237, 238, 0.8) 100%
-  );
-  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
-}
+
 
 h2:hover {
   background-color: #e38ebe;
@@ -26,6 +13,20 @@ h2:hover {
   width: 75%;
   margin: auto;
   margin-bottom: 1.5rem;
+  h2 {
+    color: #655e5e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    box-shadow: inset 0 0 10px rgba(255, 162, 105, 0.5);
+    font-family: "Rubik", sans-serif;
+    background: linear-gradient(
+      120deg,
+      #ecb0d6 0%,
+      rgba(235, 237, 238, 0.8) 100%
+    );
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
 }
 
 .sheet p {

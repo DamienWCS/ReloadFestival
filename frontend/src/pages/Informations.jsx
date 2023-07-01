@@ -1,6 +1,6 @@
 import React from "react";
 
-import styles from "../styles/Informations.module.scss";
+import styles from "../styles/informations.module.scss";
 
 function Informations() {
   return (

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../styles/Lineup.module.scss";
+import styles from "../styles/lineup.module.scss";
 
 function LineUp() {
   const [filter, setFilter] = useState("");
