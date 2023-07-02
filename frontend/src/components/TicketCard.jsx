@@ -4,7 +4,7 @@ import styles from "../styles/TicketCard.module.scss";
 
 function TicketCard({ ticketType, price, description, quantity, onClick }) {
   return (
-    <div className={`${styles["ticket-card"]} ${ticketType.toLowerCase()}`}>
+    <div className={`${styles["ticket-card"]} ${styles[`${ticketType}`]}`}>
       <div className={styles["ticket-type"]}>{ticketType}</div>
       <div className={styles["ticket-price"]}>Prix : {price} €</div>
       {quantity && (
