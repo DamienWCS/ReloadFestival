@@ -9,27 +9,30 @@
   display: flex;
   flex-wrap: wrap;
   font-family: "Righteous";
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: center; /* Centrer les tickets horizontalement */
+  align-items: space-around; /* Centrer les tickets verticalement */
   margin-top: 150px;
   text-align: center;
+  gap: 20px; /* Ajouter un espacement équilibré autour des tickets */
 }
 
 .ticket-card {
-  display: flex;
+  display: inline-block; /* Affiche les tickets en ligne */
+  margin: 1rem; /* Ajoute une marge entre les tickets */
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   width: 250px;
   height: 350px;
   border-radius: 8px;
-  background-color: #ffffff;
+  background: linear-gradient(45deg, #669bb0, #ffa269, #c3a0d5);
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   cursor: pointer;
   transition: transform 0.5s, box-shadow 0.3s;
   text-align: center;
 }
+  
 
 .ticket-card:hover {
   transform: translateY(-5px);
