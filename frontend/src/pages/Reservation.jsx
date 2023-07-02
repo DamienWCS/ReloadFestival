@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import TicketCard from "../components/TicketCard";
 import BasketCard from "../components/BasketCard";
+import styles from "../styles/Reservation.module.scss";
 
 const TICKETS_DATA = [
   {
@@ -79,7 +80,7 @@ function Reservation() {
   );
 
   return (
-    <div className="cart">
+    <div className={styles.cart}>
       {TICKETS_DATA.map((ticket) => (
         <TicketCard
           key={ticket.id}
@@ -94,7 +95,7 @@ function Reservation() {
         />
       ))}
       {cartItems.length > 0 && (
-        <div className="cart-content">
+        <div className={styles["cart-content"]}>
           <BasketCard
             ticketType="Panier"
             tickets={cartItems}

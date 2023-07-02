@@ -1,0 +1,28 @@
+.cart {
+  display: flex;
+  flex-wrap: wrap;
+  font-family: "Righteous";
+  justify-content: space-around;
+  align-items: stretch;
+  margin-top: 150px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .cart {
+    margin: auto;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .ticket-card {
+    width: calc(50% - 50px);
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .ticket-card {
+    width: calc(100% - 50px);
+  }
+}

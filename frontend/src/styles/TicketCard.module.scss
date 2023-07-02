@@ -1,42 +1,36 @@
-* {
-  box-sizing: border-box;
-  margin: auto;
-  padding: 0;
-  outline: none;
-}
-
 .cart {
   display: flex;
   flex-wrap: wrap;
   font-family: "Righteous";
-  justify-content: space-around;
-  align-items: stretch;
+  justify-content: center; 
+  align-items: space-around; 
   margin-top: 150px;
   text-align: center;
+  gap: 20px; 
 }
 
 .ticket-card {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   width: 250px;
   height: 350px;
   border-radius: 8px;
-  background-color: #ffffff;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   cursor: pointer;
   transition: transform 0.5s, box-shadow 0.3s;
   text-align: center;
 }
+  
 
 .ticket-card:hover {
   transform: translateY(-5px);
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.ticket-card.saturday {
+.ticket-card.Saturday {
   background: linear-gradient(
     120deg,
     #ecb0d6 0%,
@@ -45,7 +39,7 @@
   color: #333333;
 }
 
-.ticket-card.sunday {
+.ticket-card.Sunday {
   background: linear-gradient(
     120deg,
     rgba(245, 247, 250, 0.8) 0%,
@@ -54,24 +48,21 @@
   color: #333333;
 }
 
-.ticket-card.weekend {
+.ticket-card.Weekend {
   background: linear-gradient(120deg, #ffa269 0%, #669bb0 60%);
   color: #333333;
 }
 
 .ticket-type {
   font-size: 24px;
-  font-family: "Rubik";
 }
 
 .ticket-price {
   font-size: 20px;
-  font-family: "Rubik";
 }
 
 .ticket-description {
   font-size: 16px;
-  font-family: "Rubik";
 }
 
 .ticket-quantity {

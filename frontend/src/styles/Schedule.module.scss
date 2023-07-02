@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-h1 {
+.titre {
   font-size: 3em;
 }
 
@@ -21,14 +21,14 @@ h1 {
   margin-bottom: 2em;
 }
 
-h2 {
+.show_day {
   grid-column-start: 1;
   grid-column-end: 3;
   text-align: center;
   margin: 0;
 }
 
-h3 {
+.stage {
   text-align: center;
   margin: 0;
   margin-bottom: 1em;
@@ -68,13 +68,13 @@ $breakpoint-desktop: 1300px;
     gap: 2em;
     margin-bottom: 2em;
   }
-  h1 {
+  .titre {
     font-size: 3.5em;
   }
-  h2 {
+  .show_day {
     font-size: 2em;
   }
-  h3 {
+  .stage {
     font-size: 1.5em;
   }
   .artist {
@@ -94,10 +94,10 @@ $breakpoint-desktop: 1300px;
     margin-top: 1em;
   }
 
-  h2 {
+  .show_day {
     font-size: 2em;
   }
-  h3 {
+  .stage {
     font-size: 1.5em;
   }
   .artist {

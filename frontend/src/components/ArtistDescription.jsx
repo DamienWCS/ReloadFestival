@@ -16,7 +16,6 @@ function ArtistDescription({ togglePopUp, artistSelected }) {
       .get(`http://localhost:8000/name/${artistSelected}`)
       .then((response) => {
         setReloadArtistData(response.data);
-        // setReloadArtistData(response.data);
       })
       .catch((error) => console.error(error));
   }, []);

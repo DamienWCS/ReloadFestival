@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-h1 {
+.titre {
   font-size: 3.8em;
   margin: 0.2em;
   text-align: center;
@@ -25,7 +25,7 @@ h1 {
   margin: 1em 0 1em 0;
 }
 
-p {
+.details {
   font-size: 1em;
   width: 30%;
   text-align: center;
@@ -33,7 +33,7 @@ p {
 }
 
 .scrollBox {
-  width: 350px;
+  width: 90vw;
   height: 30vh;
   margin-bottom: 2em;
   overflow: hidden;
@@ -63,36 +63,36 @@ $breakpoint-desktop: 1300px;
   .coverImg {
     width: 45%;
   }
-  h1 {
+  .titre {
     font-size: 3.5em;
   }
   .info {
     width: 50%;
   }
-  p {
+  .details {
     font-size: 1em;
     width: 25%;
   }
 
   .scrollBox {
-    width: 600px;
+    width: 80vw;
   }
 }
 
 @media (min-width: $breakpoint-desktop) {
   .scrollBox {
-    width: 900px;
+    width: 70vw;
   }
   .coverImg {
     width: 40%;
   }
-  h1 {
+  .titre {
     font-size: 4em;
   }
   .info {
     width: 50%;
   }
-  p {
+  .details {
     font-size: 1.5em;
     width: 25%;
   }

@@ -12,12 +12,16 @@ function NavBar() {
         <Link to="/" onClick={handleCloseNavbar}>
           <img
             className={styles["img-logo-mobile"]}
-            src="../src/assets/Images/LogoLR.png"
+            src="../src/assets/Images/Logo-version-finale.svg"
             alt="Logo for mobile"
           />
         </Link>
       </div>
-      <nav className={styles[`navbar ${showLinks ? "show-nav" : "hide-nav"}`]}>
+      <nav
+        className={`${styles.navbar} ${
+          showLinks ? styles["show-nav"] : styles["hide-nav"]
+        }`}
+      >
         <ul className={styles["nav-links"]}>
           <li className={styles["nav-li logo-desk"]}>
             <Link
@@ -27,7 +31,7 @@ function NavBar() {
             >
               <img
                 className={styles["img-logo-desk"]}
-                src="../src/assets/Images/LogoLR.png"
+                src="../src/assets/Images/Logo-version-finale.svg"
                 alt="Logo for desktop"
               />
             </Link>

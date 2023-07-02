@@ -1,5 +1,5 @@
 import { useState } from "react";
-import styles from "../styles/lineup.module.scss";
+import styles from "../styles/Lineup.module.scss";
 
 function LineUp() {
   const [filter, setFilter] = useState("");
@@ -109,9 +109,9 @@ function LineUp() {
           onChange={(e) => setFilter(e.target.value)}
         />
         <button
-          className={
-            styles[`button-artistes ${showAllArtists ? "active-artistes" : ""}`]
-          }
+          className={`${styles["button-artistes"]} ${
+            showAllArtists ? styles["active-artistes"] : ""
+          }`}
           type="submit"
           onClick={handleAllArtists}
         >
@@ -128,22 +128,18 @@ function LineUp() {
           <option value="Stage 4">Stage 4</option>
         </select>
         <button
-          className={
-            styles[
-              `button-day ${dayFilter === "Saturday" ? "active-saturday" : ""}`
-            ]
-          }
+          className={`${styles["button-day"]} ${
+            dayFilter === "Saturday" ? styles["active-saturday"] : ""
+          }`}
           type="submit"
           onClick={() => handleDayFilter("Saturday")}
         >
           Saturday
         </button>
         <button
-          className={
-            styles[
-              `button-day ${dayFilter === "Sunday" ? "active-sunday" : ""}`
-            ]
-          }
+          className={`${styles["button-day"]} ${
+            dayFilter === "Sunday" ? styles["active-sunday"] : ""
+          }`}
           type="submit"
           onClick={() => handleDayFilter("Sunday")}
         >
