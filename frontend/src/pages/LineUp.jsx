@@ -122,10 +122,10 @@ function LineUp() {
           onChange={(e) => setStageFilter(e.target.value)}
         >
           <option value="All">All Stages</option>
-          <option value="Stage 1">Stage 1</option>
-          <option value="Stage 2">Stage 2</option>
-          <option value="Stage 3">Stage 3</option>
-          <option value="Stage 4">Stage 4</option>
+          <option value="Flying High">Flying High</option>
+          <option value="Sonic Sphere">Sonic Sphere</option>
+          <option value="Electronic Dawn">Electronic Dawn</option>
+          <option value="Sunset Stage">Sunset Stage</option>
         </select>
         <button
           className={`${styles["button-day"]} ${
