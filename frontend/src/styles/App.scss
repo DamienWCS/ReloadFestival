@@ -8,6 +8,13 @@
   src: url("../assets/Fonts/Rubik-Regular.ttf");
 }
 
+.app-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 h1 {
   font-family: "Righteous";
   color: white;
