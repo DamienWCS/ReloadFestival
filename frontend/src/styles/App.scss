@@ -8,11 +8,11 @@
   src: url("../assets/Fonts/Rubik-Regular.ttf");
 }
 
-.app-route {
+.app-wrapper {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: space-between;
 }
 
 h1 {
