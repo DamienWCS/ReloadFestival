@@ -14,7 +14,6 @@ function FetchArtists() {
 
   useEffect(() => {
     // Request of access token
-
     axios
       .post(
         "https://accounts.spotify.com/api/token",
