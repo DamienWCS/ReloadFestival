@@ -33,7 +33,7 @@ function Informations() {
         <ul>
           <li>
             Badge d'accès : Un badge spécial sera délivré à chaque participant
-            du Reloard Festival pour permettre l'accès aux boissons alcoolisées
+            du Reload Festival pour permettre l'accès aux boissons alcoolisées
             disponibles sur le site.
           </li>
           <li>
@@ -111,6 +111,31 @@ function Informations() {
             et les âmes des festivaliers à chaque édition.
           </li>
         </ul>
+      </div>
+      <div className={styles.sheet}>
+        <h2 className={styles.titre}>Qui sommes-nous ?</h2>
+        <p>
+          Nous sommes avant tout une équipe, composée de quatre développeurs :{" "}
+          <a href="https://github.com/DamienWCS">Damien</a>,{" "}
+          <a href="https://github.com/Achapeau">Adrien</a>,{" "}
+          <a href="https://github.com/annie-profile">Annie</a> et{" "}
+          <a href="https://github.com/Marvindje">Marvin</a>.
+        </p>
+        <p>
+          Notre but était de travailler en étroite collaboration avec les
+          équipes du festival pour rendre une application fonctionnelle ,
+          facilement lisible et compréhensible de tous pour permettre l'accès au
+          plus grand nombre. Les fonctionnalités ont été imaginées pour donner
+          aux utilisateurs l'expérience d'un festival avant même d'y être . En
+          effet nous avons prévu chaque questionnement des futurs festivaliers
+          en anticipant leur potentielles requêtes (un preview de la
+          discographie de vos artistes préferés est disponible en un click , la
+          map du festival vous permettra de vous organiser à l'avance pour votre
+          emplacement , les horaires sont disponibles avec le nom de la scène
+          associé etc...) Enfin nous espérons que notre travail aura su vous
+          accompagner tout au long de la periode précédent votre jour j et vous
+          souhaitons un merveilleux Reload-Fest!
+        </p>
       </div>
     </div>
   );
