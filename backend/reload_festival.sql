@@ -36,7 +36,7 @@ VALUES (
         'Le producteur, DJ et auteur-compositeur Calvin Harris est la figure de proue de la musique de danse moderne, ayant battu des records du monde et dominé les palmarès. Il a enregistré plus de 35 milliards de streams audio et vidéo au cours de sa carrière, ce qui fait de lui l''un des artistes les plus regardés sur YouTube et l''un des plus grands artistes de Sony Music en matière de streaming. Calvin a collaboré avec des artistes internationaux tels que Frank Ocean, Pharrell Williams, Rihanna, The Weeknd et Travis Scott, pour n''en citer que quelques-uns. Son travail a été récompensé par de nombreux prix et nominations, dont 14 nominations aux MTV VMA et 2 victoires, 5 nominations aux Grammy Awards et une victoire aux Grammy Awards 2013 dans la catégorie Meilleur clip vidéo pour ''We Found Love''.',
         'Né à Dumfries, Ecosse',
         'Dimanche',
-        '23h00',
+        '21h30',
         'Flying High'
     ), (
         'Hardwell',

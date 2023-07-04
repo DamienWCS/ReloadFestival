@@ -118,7 +118,7 @@ function Informations() {
           Nous sommes avant tout une équipe, composée de quatre développeurs :{" "}
           <a href="https://github.com/DamienWCS">Damien</a>,{" "}
           <a href="https://github.com/Achapeau">Adrien</a>,{" "}
-          <a href="https://github.com/annie-profile">Annie</a> et{" "}
+          <a href="https://github.com/annieccar">Annie</a> et{" "}
           <a href="https://github.com/Marvindje">Marvin</a>.
         </p>
         <p>
