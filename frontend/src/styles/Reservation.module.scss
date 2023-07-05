@@ -1,9 +1,201 @@
+.basket-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 350px;
+  border-radius: 100px;
+  background: linear-gradient(230deg, #dccce7, #ffb79e);
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2),
+    inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  transition: transform 0.5s, box-shadow 0.3s;
+  font-family: "Rubik";
+  text-align: center;
+
+  .panier {
+    background: linear-gradient(120deg, #fdd6a7, #ebeef3);
+    color: #333333;
+  }
+
+  .basket-items {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+  }
+
+  .basket-header {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .basket-type {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .basket-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 100%;
+  }
+
+  .basket-button {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    font-family: "Righteous";
+    padding: 4px 8px;
+    border-radius: 100px;
+    cursor: pointer;
+    transition: background-color 0.5s, box-shadow 0.5s;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1),
+      inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: auto;
+    padding: 0;
+    outline: none;
+  }
+
+  .basket-button:hover {
+    background-color: #c1b5b5;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2),
+      inset 0px 0px 4px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+    font-family: "Righteous";
+    transition: transform 0.5s, box-shadow 0.3s;
+  }
+  .basket-total-price {
+    margin-top: 10px;
+  }
+}
+
+.basket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2),
+    inset 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.button {
+  background-color: linear-gradient(
+    120deg,
+    rgba(245, 247, 250, 0.8) 0%,
+    #c3a0d5 100%
+  );
+  color: #000000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 15px;
+  font-family: "Righteous";
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.5s, box-shadow 0.5s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
 .cart {
   display: flex;
   flex-wrap: wrap;
   font-family: "Righteous";
   justify-content: space-around;
-  align-items: stretch;
+  align-items: space-around;;
+  text-align: center;
+  margin-top: 9.2rem;
+  gap: 1.3rem;
+}
+
+.ticket-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+  height: 350px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  cursor: pointer;
+  transition: transform 0.5s, box-shadow 0.3s;
+  text-align: center;
+}
+
+.ticket-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-card.Samedi {
+  background: linear-gradient(120deg, #ecb0d6 0%, #ebedee 60%);
+  color: #333333;
+}
+
+.ticket-card.Dimanche {
+  background: linear-gradient(120deg, #f5f7fa 0%, #c3a0d5 60%);
+  color: #333333;
+}
+
+.ticket-card.Weekend {
+  background: linear-gradient(120deg, #ffa269 0%, #669bb0 60%);
+  color: #333333;
+}
+
+.ticket-type {
+  font-size: 24px;
+}
+
+.ticket-price {
+  font-size: 20px;
+}
+
+.ticket-description {
+  font-size: 16px;
+}
+
+.ticket-quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ticket-button {
+  background-color: linear-gradient(
+    120deg,
+    rgba(245, 247, 250, 0.8) 0%,
+    #c3a0d5 100%
+  );
+  color: #000000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 15px;
+  font-family: "Righteous";
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.5s, box-shadow 0.5s;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-button:hover {
+  background-color: #c1b5b5;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  transition: transform 0.5s, box-shadow 0.3s;
+}
+
+.total-price {
+  margin-top: 20px;
+  font-size: 24px;
   text-align: center;
 }
 
