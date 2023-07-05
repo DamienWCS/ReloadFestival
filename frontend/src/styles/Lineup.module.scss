@@ -3,6 +3,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/Fonts/Rubik-Regular.ttf");
+}
 
 .body {
   display: flex;

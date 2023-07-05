@@ -12,7 +12,7 @@ function NavBar() {
         <Link to="/" onClick={handleCloseNavbar}>
           <img
             className={styles["img-logo-mobile"]}
-            src="../assets/Images/Logo-version-bleu.png"
+            src="../assets/Images/Logo-version-finale.png"
             alt="Logo for mobile"
           />
         </Link>
@@ -31,7 +31,7 @@ function NavBar() {
             >
               <img
                 className={styles["img-logo-desk"]}
-                src="../assets/Images/Logo-version-bleu.png"
+                src="../assets/Images/Logo-version-finale.png"
                 alt="Logo for desktop"
               />
             </Link>

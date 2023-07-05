@@ -100,6 +100,17 @@ function LineUp() {
       <div className={styles["lineup-block"]}>
         <h2>LINEUP</h2>
       </div>
+      <iframe
+        title="player"
+        style={{ borderRadius: "15px" }}
+        src="https://open.spotify.com/embed/playlist/1TqwrS5c8vgpO4h4U5gPjQ?utm_source=generator"
+        width="90%"
+        height="152"
+        frameBorder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        loading="lazy"
+      />
       <div className={styles["box-filter"]}>
         <input
           className={styles.input}
@@ -122,10 +133,10 @@ function LineUp() {
           onChange={(e) => setStageFilter(e.target.value)}
         >
           <option value="All">All Stages</option>
-          <option value="Stage 1">Stage 1</option>
-          <option value="Stage 2">Stage 2</option>
-          <option value="Stage 3">Stage 3</option>
-          <option value="Stage 4">Stage 4</option>
+          <option value="Flying High">Flying High</option>
+          <option value="Sonic Sphere">Sonic Sphere</option>
+          <option value="Electronic Dawn">Electronic Dawn</option>
+          <option value="Sunset Stage">Sunset Stage</option>
         </select>
         <button
           className={`${styles["button-day"]} ${
