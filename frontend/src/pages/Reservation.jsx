@@ -80,32 +80,35 @@ function Reservation() {
   );
 
   return (
-    <div className={styles.cart}>
-      {TICKETS_DATA.map((ticket) => (
-        <TicketCard
-          key={ticket.id}
-          ticketType={ticket.name}
-          price={ticket.price}
-          description={ticket.description}
-          quantity={
-            cartItems.find((item) => item.ticket.id === ticket.id)?.quantity ||
-            0
-          }
-          onClick={() => addToCart(ticket)}
-        />
-      ))}
-      {cartItems.length > 0 && (
-        <div className={styles["cart-content"]}>
-          <BasketCard
-            ticketType="Panier"
-            tickets={cartItems}
-            totalPrice={totalPrice}
-            onRemove={removeFromCart}
-            onAdd={addToCart}
+    <>
+      <div className={styles.titre}>Réservation</div>
+      <div className={styles.cart}>
+        {TICKETS_DATA.map((ticket) => (
+          <TicketCard
+            key={ticket.id}
+            ticketType={ticket.name}
+            price={ticket.price}
+            description={ticket.description}
+            quantity={
+              cartItems.find((item) => item.ticket.id === ticket.id)
+                ?.quantity || 0
+            }
+            onClick={() => addToCart(ticket)}
           />
-        </div>
-      )}
-    </div>
+        ))}
+        {cartItems.length > 0 && (
+          <div className={styles["cart-content"]}>
+            <BasketCard
+              ticketType="Panier"
+              tickets={cartItems}
+              totalPrice={totalPrice}
+              onRemove={removeFromCart}
+              onAdd={addToCart}
+            />
+          </div>
+        )}
+      </div>
+    </>
   );
 }
 

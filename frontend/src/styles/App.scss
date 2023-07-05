@@ -18,16 +18,16 @@
 .page {
   height: 92vh;
   overflow-y: scroll;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  padding-top:1em;
+  padding-top: 1em;
 }
 
 .page::-webkit-scrollbar {
   display: none;
 }
 
-.content{
+.content {
   flex-grow: 1;
 }
 
