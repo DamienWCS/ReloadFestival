@@ -5,6 +5,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 .logo-mobile {
   display: none;
 }
@@ -38,11 +39,12 @@
   right: 0;
   display: flex;
   width: 100vw;
+  height: 8vh;
   flex-direction: row;
   list-style-type: none;
   justify-content: space-around;
   padding: 0;
-  margin: 1rem;
+  align-items: center;
   font-size: 1.5em;
 }
 
@@ -50,14 +52,13 @@
   padding: 0 0.3rem;
   color: inherit;
   text-decoration: none;
-  height: 56px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .nav-burger {
-  width: 40px;
-  height: 40px;
+  height: 90%;
   background: transparent;
   display: none;
   color: inherit;
@@ -66,10 +67,13 @@
 @media screen and (max-width: 767px) {
   .block-nav h1 {
     font-size: 1rem;
-    background-color: black;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    -webkit-text-fill-color: white;
   }
+
+  .block-nav {
+    height: 54px;
+  }
+
   .img-logo-desk {
     display: flex;
   }
@@ -81,13 +85,12 @@
     left: 0rem;
     top: 0rem;
     display: flex;
-    height: 76px;
-    width: 76px;
+    height: 54px;
   }
   .img-logo-mobile {
-    margin: 1rem;
-    width: 60px;
-    height: 60px;
+    margin-top: 0.5vh;
+    margin-left: 1vh;
+    height: 90%;
   }
   .nav-links {
     flex-direction: column;
@@ -96,15 +99,12 @@
     position: fixed;
     z-index: 3;
     right: -100vw;
-    top: 3rem;
+    top: 8vh;
     width: 0;
     height: 55vh;
     padding: 1rem;
-    background: linear-gradient(
-      120deg,
-      rgba(142, 125, 154),
-      rgba(255, 183, 158)
-    );
+    margin-right: 0.5em;
+    background: linear-gradient(120deg, #ecb0d6, #669bb0);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5),
       inset 0px 0px 8px rgba(0, 0, 0, 0.5);
     visibility: hidden;
@@ -136,10 +136,10 @@
   .nav-burger {
     display: block;
     position: fixed;
-    top: 1rem;
-    right: 1rem;
+    top: 0.5vh;
+    right: 0.5vh;
     border-radius: 50%;
-    border: 2px solid #fff;
+    border: 2px solid #669bb0;
     width: 45px;
     height: 45px;
   }
@@ -156,7 +156,7 @@
     left: 11px;
     position: relative;
     border-radius: 3px;
-    background: #fff;
+    background: #669bb0;
     transition: all 0.3s ease-in-out;
   }
   .burgerBar::before,
