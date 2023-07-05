@@ -16,16 +16,16 @@ function Footer() {
     <footer className={styles.footer}>
       <div className={styles.container}>
         <ul className={styles.links}>
-          <li>
+          <li className={styles["list-link"]}>
             <Link to="/">Accueil</Link>
           </li>
-          <li>
+          <li className={styles["list-link"]}>
             <Link to="/informations">À propos</Link>
           </li>
-          <li>
+          <li className={styles["list-link"]}>
             <Link to="/review">Review</Link>
           </li>
-          <li>
+          <li className={styles["list-link"]}>
             <button
               type="button"
               className={styles.buttonPartenaire}
@@ -37,9 +37,9 @@ function Footer() {
         </ul>
         {showLogos && (
           <div className={styles.partenaires}>
-            <div className={styles.partenairesSection}>
-              <h3 style={{ color: "#333" }}>Collaborateurs</h3>
+            <div className={styles["partenaires-section"]}>
               <a
+                className={styles["link-partenaire"]}
                 href="https://github.com/WildCodeSchool/2023-05-JS-RemoteFR-LaBoulangerieDuCode-P2-cine-react"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -47,10 +47,11 @@ function Footer() {
                 <img
                   src={logoCinereact}
                   alt="cinereact"
-                  className={styles.partenairesImage}
+                  className={styles.partenairesCineReact}
                 />
               </a>
               <a
+                className={styles["link-partenaire"]}
                 href="https://github.com/WildCodeSchool/2023-05-JS-RemoteFR-LaBoulangerieDuCode-P2-questubois"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -58,10 +59,11 @@ function Footer() {
                 <img
                   src={logoQuestubois}
                   alt="questubois"
-                  className={styles.partenairesImage}
+                  className={styles.partenairesQuestubois}
                 />
               </a>
               <a
+                className={styles["link-partenaire"]}
                 href="https://github.com/WildCodeSchool/2023-05-JS-RemoteFR-LaBoulangerieDuCode-P2-MCU-Timeline"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -69,7 +71,7 @@ function Footer() {
                 <img
                   src={logoMcu}
                   alt="Logo-version-finale"
-                  className={styles.partenairesImage}
+                  className={styles.partenairesMCU}
                 />
               </a>
             </div>
