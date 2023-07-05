@@ -13,3 +13,11 @@
   justify-content: center;
   align-items: center;
 }
+
+$breakpoint-mobile: 450px;
+
+@media (max-width: $breakpoint-mobile) {
+  .img{
+    width:90%;
+  }
+}
