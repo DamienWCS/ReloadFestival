@@ -30,6 +30,25 @@ function ArtistDescription({ togglePopUp, artistSelected }) {
     setIsFavorites(!isFavorites);
   };
 
+  useEffect(() => {
+    if (isFavorites) {
+      // Récupérer les artistes favoris existants depuis le localStorage
+      const favorites = localStorage.getItem("favorites");
+      const parsedFavorites = favorites ? JSON.parse(favorites) : [];
+
+      // Vérifier si l'artiste sélectionné est déjà dans les favoris
+      const isAlreadyFavorite = parsedFavorites.some(
+        (favorite) => favorite.name === artistSelectedData.name
+      );
+
+      if (!isAlreadyFavorite) {
+        // Ajouter l'artiste sélectionné aux favoris
+        const updatedFavorites = [...parsedFavorites, artistSelectedData];
+        localStorage.setItem("favorites", JSON.stringify(updatedFavorites));
+      }
+    }
+  }, [isFavorites, artistSelectedData]);
+
   return (
     <div className={styles.popUp}>
       {artistSelectedData && reloadArtistData.length > 0 && (
