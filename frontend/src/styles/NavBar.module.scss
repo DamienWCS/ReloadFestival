@@ -16,7 +16,9 @@
   display: flex;
   justify-content: space-between;
   height: 10vh;
-  width: 95%;
+  width: 100%;
+  position: sticky;
+  z-index: 10;
 }
 
 .navbar .hide-nav,
@@ -84,15 +86,16 @@
     height: 60px;
   }
   .nav-links {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     position: fixed;
     right: -100vw;
     top: 3rem;
     width: 0;
     height: 55vh;
-    padding: 1rem;
+    padding: 0.7rem;
     background: linear-gradient(120deg, #8e7d9a, #ffb79e);
     box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5),
       inset 0px 0px 8px rgba(0, 0, 0, 0.5);

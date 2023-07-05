@@ -9,8 +9,12 @@
   position: fixed;
 }
 
+.popUp {
+  z-index: 2;
+}
+
 .overlay {
-  background: rgba(49, 49, 49, 0.7);
+  background: rgba(49, 49, 49, 0.8);
 }
 
 .descriptionCard {
@@ -106,6 +110,7 @@
   padding: 0.5em;
   height: 10%;
   font-size: 1em;
+  text-align: center;
 }
 
 .description {
@@ -129,7 +134,7 @@ $breakpoint-desktop: 1300px;
     height: 70vh;
   }
   .artist_name {
-    font-size: 3em;
+    font-size: 2em;
   }
 
   .informations {
@@ -184,20 +189,24 @@ $breakpoint-desktop: 1300px;
   .jour,
   .heure,
   .scène {
-    font-size: 1.2em;
+    font-size: 1em;
   }
   .description {
-    font-size: 1.2em;
+    font-size: 1em;
   }
 }
 
 @media (min-width: $breakpoint-desktop) {
+  .artist_name {
+    font-size: 2em;
+  }
+
   .description {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .origin,
   .real_name {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
   .showDetails {
     width: 60%;
@@ -222,6 +231,6 @@ $breakpoint-desktop: 1300px;
   .jour,
   .heure,
   .scène {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 }
