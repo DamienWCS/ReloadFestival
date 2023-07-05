@@ -11,8 +11,6 @@ import ResetMap from "../components/ResetMap";
 import styles from "../styles/MapFestival.module.scss";
 
 function MapFestival() {
-  // const [center, setCenter] = useState([46.1406, -1.1606]);
-
   const markerScene = [
     {
       geocode: [46.14159, -1.16914],
@@ -114,12 +112,6 @@ function MapFestival() {
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-
-        {/* ESRI WORLD IMAGERY MAPS TILES */}
-        {/* <TileLayer
-          attribution="Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
-          url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}.png"
-        /> */}
 
         <MarkerClusterGroup>
           {markerScene.map((marker) => (
