@@ -9,8 +9,12 @@ function App() {
     <div className="app-wrapper">
       <NavBar />
       <div className="page">
-        <AppRoutes />
-        <Footer />
+        <div className="content">
+          <AppRoutes />
+        </div>
+        <div className="footer">
+          <Footer />
+        </div>
       </div>
     </div>
   );
