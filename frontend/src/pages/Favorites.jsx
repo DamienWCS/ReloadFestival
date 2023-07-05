@@ -56,7 +56,7 @@ function Favorites() {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.title}>My Favorites</h1>
+      <h1 className={styles.title}>Mes favoris</h1>
 
       {favoriteDetails.map((favorite) => (
         <div key={favorite.name} className={styles.artistContainer}>
@@ -70,7 +70,7 @@ function Favorites() {
             className={styles.removeButton}
             onClick={() => removeFavorite(favorite.name)}
           >
-            <span>Remove</span>
+            <span>Retirer</span>
           </button>
         </div>
       ))}

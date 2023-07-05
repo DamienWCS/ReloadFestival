@@ -8,6 +8,11 @@
   src: url("../assets/Fonts/Rubik-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Righteous";
+  src: url("../assets/Fonts/Righteous-Regular.ttf");
+}
+
 .body {
   display: flex;
   flex-direction: column;
@@ -22,9 +27,13 @@
   align-items: center;
 
   h2 {
-    font-size: xx-large;
+    font-size: 3em;
     font-family: "Righteous";
   }
+}
+
+.lecteur {
+  width: 90%;
 }
 
 .box-filter {
@@ -105,6 +114,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+
+  .lecteur {
+    width: 30%;
   }
 
   .box-filter {
