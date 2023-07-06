@@ -35,9 +35,7 @@ function Reservation() {
   }, []);
 
   useEffect(() => {
-    if (cartItems.length) {
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    }
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
   const addToCart = (ticket) => {
@@ -54,6 +52,11 @@ function Reservation() {
     }
   };
 
+  const removeBasket = () => {
+    localStorage.removeItem("cartItems");
+    setCartItems([]);
+  };
+
   const removeFromCart = (ticketId) => {
     const existingItemIndex = cartItems.findIndex(
       (item) => item.ticket.id === ticketId
@@ -61,17 +64,13 @@ function Reservation() {
 
     if (existingItemIndex !== -1) {
       const updatedCartItems = [...cartItems];
+      updatedCartItems[existingItemIndex].quantity -= 1;
 
-      while (existingItemIndex >= 0) {
-        updatedCartItems[existingItemIndex].quantity = 0;
-        if (updatedCartItems[existingItemIndex].quantity === 0) {
-          updatedCartItems.splice(existingItemIndex, 1);
-        }
-        if (cartItems.length) {
-          setCartItems(updatedCartItems);
-          localStorage.removeItem("cartItems");
-        }
+      if (updatedCartItems[existingItemIndex].quantity === 0) {
+        updatedCartItems.splice(existingItemIndex, 1);
       }
+
+      setCartItems(updatedCartItems);
     }
   };
 
@@ -82,7 +81,7 @@ function Reservation() {
 
   const handlePopUp = () => {
     setPopUp(!popUp);
-    removeFromCart(cartItems[0].ticket.id);
+    removeBasket();
   };
 
   return (
@@ -124,13 +123,19 @@ function Reservation() {
                   <div className={styles["basket-item-name"]}>
                     {ticket.ticket.name} x {ticket.quantity}
                   </div>
+                  <button
+                    type="button"
+                    className={styles.button}
+                    onClick={() => removeFromCart(ticket.ticket.id)}
+                  >
+                    Enlever un élément
+                  </button>
                 </div>
               ))}
               <button
                 type="button"
                 className={styles.button}
-                onClick={() => removeFromCart(cartItems[0].ticket.id)}
-                label="-"
+                onClick={removeBasket}
               >
                 Vider le panier
               </button>
