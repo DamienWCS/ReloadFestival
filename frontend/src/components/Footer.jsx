@@ -23,7 +23,7 @@ function Footer() {
             <Link to="/informations">À propos</Link>
           </li>
           <li className={styles["list-link"]}>
-            <Link to="/review">Review</Link>
+            <Link to="/review">Avis</Link>
           </li>
           <li className={styles["list-link"]}>
             <button
@@ -40,7 +40,7 @@ function Footer() {
             <div className={styles["partenaires-section"]}>
               <a
                 className={styles["link-partenaire"]}
-                href="https://github.com/WildCodeSchool/2023-05-JS-RemoteFR-LaBoulangerieDuCode-P2-cine-react"
+                href="https://cinereact.cdnsamuel.fr/"
                 target="_blank"
                 rel="noopener noreferrer"
               >

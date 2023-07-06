@@ -48,7 +48,7 @@ function HomePage() {
     <div className={styles["home-page"]}>
       <h1 className={styles.titre}>Reload Fest</h1>
       <div className={styles.info}>
-        <p className={styles.details}>19 & 20th August 2023</p>
+        <p className={styles.details}>19 & 20 Août 2023</p>
         <p className={styles.details}>Les Minimes</p>
         <p className={styles.details}>Larochelle</p>
       </div>
