@@ -33,7 +33,7 @@
 .list-link {
   display: flex;
   align-items: center; /* Ajout de cette ligne */
-  font-family: "Righteous";
+  font-family: "Rubik";
 }
 
 .list-link:last-child {
@@ -44,7 +44,7 @@
 .list-link a {
   color: #333;
   text-decoration: none;
-  font-size: 14px;
+  font-size: 1.5em;
   margin: 0 10px;
 }
 
@@ -53,7 +53,7 @@
   align-items: center; /* Ajout de cette ligne */
 }
 
-.partenaires{
+.partenaires {
   img {
     width: auto;
     height: 70px;
@@ -90,26 +90,27 @@
       margin-right: 0;
     }
     .partenaires {
-      .partenaires-section{
+      .partenaires-section {
         margin: auto;
       }
     }
   }
-  .list-link{
+  .list-link {
     font-family: "Rubik";
   }
-  .partenaires-section{
-    
+
+  .list-link a {
+    font-size: 1em;
+  }
+  .partenaires-section {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    
-      .partenairesMCU{
-        height: 2.4rem;
-        width: auto;
-      }
+
+    .partenairesMCU {
+      height: 2.4rem;
+      width: auto;
+    }
   }
-
-
 }

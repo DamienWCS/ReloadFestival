@@ -139,8 +139,7 @@
 
 
 
-.reservation-page {
-}
+
 
 .ticket-card {
   display: flex;
@@ -223,6 +222,14 @@
   margin-top: 20px;
   font-size: 24px;
   text-align: center;
+}
+
+.titre {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  font-family: "Righteous";
+  margin-bottom: 1em;
 }
 
 @media screen and (max-width: 767px) {

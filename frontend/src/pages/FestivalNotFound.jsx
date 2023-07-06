@@ -1,9 +1,18 @@
 import React from "react";
 
+import styles from "../styles/FestivalNotFound.module.scss";
+
 function FestivalNotFound() {
   return (
-    <div>
-      <h1>Festival Not Found</h1>
+    <div className={styles.container}>
+      <h1 className={styles.titre}>
+        Désolé, nous n'avons pas trouvé votre festival...
+      </h1>
+      <img
+        className={styles.img}
+        src="../src/assets/Images/festivaNotFound.jpg"
+        alt="The desert"
+      />
     </div>
   );
 }

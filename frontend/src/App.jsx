@@ -8,8 +8,14 @@ function App() {
   return (
     <div className="app-wrapper">
       <NavBar />
-      <AppRoutes />
-      <Footer />
+      <div className="page">
+        <div className="content">
+          <AppRoutes />
+        </div>
+        <div className="footer">
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
