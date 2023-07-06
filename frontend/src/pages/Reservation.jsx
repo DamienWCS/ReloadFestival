@@ -157,12 +157,12 @@ function Reservation() {
         <div className={styles.annonce}>
           <p className={styles["validation-achat"]}>
             Félicitations pour votre achat, on vous attends avec impatience pour
-            le weekend du 19-20 août
+            le weekend du 19-20 août 2023!
           </p>
+          <button className={styles.close} type="button" onClick={handlePopUp}>
+            Fermer
+          </button>
         </div>
-        <button className={styles.close} type="button" onClick={handlePopUp}>
-          Fermer
-        </button>
       </div>
     </div>
   );
