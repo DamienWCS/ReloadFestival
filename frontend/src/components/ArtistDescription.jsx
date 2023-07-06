@@ -22,7 +22,9 @@ function ArtistDescription({ togglePopUp, artistSelected }) {
 
   // Récupérer les images depuis l'API spotify:
   const artists = FetchArtists();
-  const artistSelectedData = artists.find((el) => el.name === artistSelected);
+  const artistSelectedData = artists.find(
+    (el) => el.name.toLowerCase() === artistSelected.toLowerCase()
+  );
 
   // Fonction pour activation du state favorites:
   const [isFavorites, setIsFavorites] = useState(false);
