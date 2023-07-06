@@ -1,3 +1,25 @@
+## Description Project
+
+We want to create a website for a music festival. On this website, we can see a line-up of artist showcased at the festival and acces informations on each artits obtained through the spotify API. There will be the possibility to search for artist by genre or several filters.
+
+## LINEUP
+
+Stage 1:
+Armin van Buuren - Calvin Harris - Hardwell - Illenium -
+Kygo - Martin Garrix - Nicky Romero - Quintino - Skrillex - Tiesto
+
+Stage 2:
+Afrojack - Benny Benassi - Jax Jones - Paul Kalkbrenner - Disclosure -
+Excision - Deadmau5 - Dr Peacock - Charlotte de White - Dj Snake
+
+Stage 3:
+Dash Berlin - Nora En Pure - Marshmello - Zedd - Alesso - Major Lazer -
+The Chainsmokers - Sickick - Deorro - Timmy Trumpet -
+
+Stage 4:
+Sound of Legend - Da Tweekaz - Sub Zero Project - R3hab - Ummet Ozcan -
+Les Gordon - NTO - NHYX - ALLE Farben - Marcapasos
+
 ## Concept
 
 This template is meant to serve as a foundation for every P2/P3 following the React-Express-MySQL stack, as learned in Wild Code School.
