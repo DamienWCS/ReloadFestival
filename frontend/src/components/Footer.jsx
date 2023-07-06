@@ -40,7 +40,7 @@ function Footer() {
             <div className={styles["partenaires-section"]}>
               <a
                 className={styles["link-partenaire"]}
-                href="https://github.com/WildCodeSchool/2023-05-JS-RemoteFR-LaBoulangerieDuCode-P2-cine-react"
+                href="https://cinereact.cdnsamuel.fr/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
