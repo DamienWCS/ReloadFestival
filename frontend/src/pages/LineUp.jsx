@@ -3,7 +3,6 @@ import styles from "../styles/Lineup.module.scss";
 
 function LineUp() {
   const [filter, setFilter] = useState("");
-  const [dayFilter, setDayFilter] = useState("All");
   const [stageFilter, setStageFilter] = useState("All");
   const [showAllArtists, setShowAllArtists] = useState(false);
 
@@ -12,16 +11,16 @@ function LineUp() {
       day: "Saturday",
       stage: "Flying High",
       artistes: [
-        "Armin van Buuren",
-        "Calvin Harris",
-        "Hardwell",
         "Illenium",
         "Kygo",
-        "Martin Garrix",
+        "Skrillex",
+        "Armin van Buuren",
+        "Hardwell",
         "Nicky Romero",
         "Quintino",
-        "Skrillex",
-        "Tiesto",
+        "Tiëto",
+        "Calvin Harris",
+        "Martin Garrix",
       ],
     },
     {
@@ -29,19 +28,19 @@ function LineUp() {
       stage: "Sonic Sphere",
       artistes: [
         "Afrojack",
-        "Benni Benassi",
+        "Benny Benassi",
         "Jax Jones",
         "Paul Kalkbrenner",
         "Disclosure",
-        "Excision",
-        "Deadmau5",
-        "Dr Peacock",
-        "Charlotte de Witte",
         "DJ Snake",
+        "Charlotte de Witte",
+        "Dr.Peacock",
+        "Excision",
+        "deadmau5",
       ],
     },
     {
-      day: "Sunday",
+      day: "Saturday",
       stage: "Electronic Dawn",
       artistes: [
         "Dash Berlin",
@@ -57,30 +56,22 @@ function LineUp() {
       ],
     },
     {
-      day: "Sunday",
+      day: "Saturday",
       stage: "Sunset Stage",
       artistes: [
-        "Sound of Legend",
+        "Sound Of Legend",
         "Da Tweekaz",
         "Sub Zero Project",
         "R3hab",
         "Ummet Ozcan",
         "Les Gordon",
         "NTO",
-        "NHYX",
+        "Nhyx",
         "Alle Farben",
         "Marcapasos",
       ],
     },
   ];
-
-  const handleDayFilter = (day) => {
-    if (dayFilter === day) {
-      setDayFilter("All");
-    } else {
-      setDayFilter(day);
-    }
-  };
 
   const handleAllArtists = () => {
     setShowAllArtists(!showAllArtists);
@@ -139,24 +130,6 @@ function LineUp() {
           <option value="Electronic Dawn">Electronic Dawn</option>
           <option value="Sunset Stage">Sunset Stage</option>
         </select>
-        <button
-          className={`${styles["button-day"]} ${
-            dayFilter === "Saturday" ? styles["active-saturday"] : ""
-          }`}
-          type="submit"
-          onClick={() => handleDayFilter("Saturday")}
-        >
-          Samedi
-        </button>
-        <button
-          className={`${styles["button-day"]} ${
-            dayFilter === "Sunday" ? styles["active-sunday"] : ""
-          }`}
-          type="submit"
-          onClick={() => handleDayFilter("Sunday")}
-        >
-          Dimanche
-        </button>
       </div>
       <div className={styles.stage_content}>
         {showAllArtists
@@ -166,11 +139,7 @@ function LineUp() {
               )
               .map((artist) => <li key={artist}>{artist}</li>)
           : data
-              .filter(
-                ({ day, stage }) =>
-                  matchesFilter(day, dayFilter) &&
-                  matchesFilter(stage, stageFilter)
-              )
+              .filter(({ stage }) => matchesFilter(stage, stageFilter))
               .map(({ stage, artistes }) => (
                 <div key={stage}>
                   <h4>{stage}</h4>
