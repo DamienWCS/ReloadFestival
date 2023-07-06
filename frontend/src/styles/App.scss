@@ -23,6 +23,18 @@
   padding-top: 1em;
 }
 
+.boxLecteur {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.lecteur {
+  width: 90%;
+  height: 5em;
+}
+
 .page::-webkit-scrollbar {
   display: none;
 }
@@ -56,6 +68,13 @@ $breakpoint-largeScreen: 500px;
   :root {
     background-size: cover;
     background-position-y: center;
+  }
+  .boxLecteur {
+    justify-content: right;
+  }
+  .lecteur {
+    width: 20%;
+    margin-right: 1em;
   }
 }
 

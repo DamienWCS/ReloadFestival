@@ -23,7 +23,7 @@ function Footer() {
             <Link to="/informations">À propos</Link>
           </li>
           <li className={styles["list-link"]}>
-            <Link to="/review">Review</Link>
+            <Link to="/review">Avis</Link>
           </li>
           <li className={styles["list-link"]}>
             <button
