@@ -67,8 +67,8 @@ function Reservation() {
         if (updatedCartItems[existingItemIndex].quantity === 0) {
           updatedCartItems.splice(existingItemIndex, 1);
         }
-        setCartItems(updatedCartItems);
         if (cartItems.length) {
+          setCartItems(updatedCartItems);
           localStorage.removeItem("cartItems");
         }
       }
@@ -82,83 +82,88 @@ function Reservation() {
 
   const handlePopUp = () => {
     setPopUp(!popUp);
-    localStorage.removeItem("cartItems");
+    removeFromCart(cartItems[0].ticket.id);
   };
 
   return (
-    <div className={styles.cart}>
-      {TICKETS_DATA.map((ticket) => (
-        <div
-          key={ticket.name}
-          className={`${styles["ticket-card"]} ${styles[`${ticket.name}`]}`}
-        >
-          <div className={styles["ticket-type"]}>{ticket.name}</div>
-          <div className={styles["ticket-price"]}>Prix : {ticket.price} €</div>
-          <div className={styles["ticket-description"]}>
-            {ticket.description}
-          </div>
-          <button
-            className={styles["ticket-button"]}
-            type="button"
-            onClick={() => addToCart(ticket)}
+    <div className={styles["reservation-page"]}>
+      <div
+        className={`${styles.cart} ${
+          popUp ? styles["hide-popUp"] : styles["show-popUp"]
+        }`}
+      >
+        {TICKETS_DATA.map((ticket) => (
+          <div
+            key={ticket.name}
+            className={`${styles["ticket-card"]} ${styles[`${ticket.name}`]}`}
           >
-            Ajouter au panier
-          </button>
-        </div>
-      ))}
-      {cartItems.length > 0 && (
-        <div className={styles["basket-card"]}>
-          <div className={styles["basket-header"]}>
-            <h2>"Panier"</h2>
-          </div>
-          <div className={styles["basket-items"]}>
-            {cartItems.map((ticket) => (
-              <div key={ticket.ticket.name} className={styles["basket-item"]}>
-                <div className={styles["basket-item-name"]}>
-                  {ticket.ticket.name}
-                </div>
-                <div className={styles["basket-item-quantity"]}>
-                  x{ticket.quantity}
-                </div>
-              </div>
-            ))}
+            <div className={styles["ticket-type"]}>{ticket.name}</div>
+            <div className={styles["ticket-price"]}>
+              Prix : {ticket.price} €
+            </div>
+            <div className={styles["ticket-description"]}>
+              {ticket.description}
+            </div>
             <button
+              className={styles["ticket-button"]}
               type="button"
-              className={styles.button}
-              onClick={() => removeFromCart(cartItems[0].ticket.id)}
-              label="-"
+              onClick={() => addToCart(ticket)}
             >
-              Vider le panier
+              Ajouter au panier
             </button>
           </div>
-          <div className={styles["basket-total-price"]}>
-            Prix total : {totalPrice} €
+        ))}
+        {cartItems.length > 0 && (
+          <div className={styles["basket-card"]}>
+            <div className={styles["basket-header"]}>
+              <h2>"Panier"</h2>
+            </div>
+            <div className={styles["basket-items"]}>
+              {cartItems.map((ticket) => (
+                <div key={ticket.ticket.name} className={styles["basket-item"]}>
+                  <div className={styles["basket-item-name"]}>
+                    {ticket.ticket.name} x {ticket.quantity}
+                  </div>
+                </div>
+              ))}
+              <button
+                type="button"
+                className={styles.button}
+                onClick={() => removeFromCart(cartItems[0].ticket.id)}
+                label="-"
+              >
+                Vider le panier
+              </button>
+            </div>
+            <div className={styles["basket-total-price"]}>
+              Prix total : {totalPrice} €
+            </div>
+            <button
+              type="button"
+              className={styles["basket-button"]}
+              onClick={handlePopUp}
+            >
+              commande ton ticket !
+            </button>
           </div>
-          <button
-            type="button"
-            className={styles["basket-button"]}
-            onClick={handlePopUp}
-          >
-            commande ton ticket !
-          </button>
+        )}
+      </div>
+
+      <div
+        className={`${styles["cadre-popUp"]} ${
+          popUp ? styles["show-popUp"] : styles["hide-popUp"]
+        }`}
+      >
+        <div className={styles.annonce}>
+          <p className={styles["validation-achat"]}>
+            Félicitations pour votre achat, on vous attends avec impatience pour
+            le weekend du 19-20 août
+          </p>
         </div>
-      )}
-      {popUp && (
-        <div className={styles["cadre-popUp"]}>
-          <div className={styles.annonce}>
-            <p className={styles["validation-achat"]}>
-              Félicitations pour votre achat, on vous attends avec impatience
-              pour le weekend du 19-20 août
-            </p>
-          </div>
-          <button
-            type="button"
-            label="Fermer"
-            className={styles.validation}
-            onClick={setPopUp(!popUp)}
-          />
-        </div>
-      )}
+        <button className={styles.close} type="button" onClick={handlePopUp}>
+          Fermer
+        </button>
+      </div>
     </div>
   );
 }
