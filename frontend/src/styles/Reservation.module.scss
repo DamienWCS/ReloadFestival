@@ -1,3 +1,13 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("../assets/Fonts/Rubik-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url("../assets/Fonts/Righteous-Regular.ttf");
+}
+
 .cart {
   display: flex;
   flex-wrap: wrap;
@@ -5,6 +15,14 @@
   justify-content: space-around;
   align-items: stretch;
   text-align: center;
+}
+
+.titre {
+  text-align: center;
+  color: white;
+  font-size: 3em;
+  font-family: "Righteous";
+  margin-bottom: 1em;
 }
 
 @media screen and (max-width: 767px) {
