@@ -1,7 +1,19 @@
 import { useState } from "react";
 import styles from "../styles/Lineup.module.scss";
 
+import ArtistDescription from "../components/ArtistDescription";
+
 function LineUp() {
+  // code ajouté Annie: gestion du pop-up
+  const [popUp, setPopUp] = useState(false);
+  const [artistSelected, setArtistSelected] = useState("");
+
+  const togglePopUp = (e) => {
+    setPopUp(!popUp);
+    setArtistSelected(e.target.innerHTML);
+  };
+  // fin du code ajouté par Annie
+
   const [filter, setFilter] = useState("");
   const [stageFilter, setStageFilter] = useState("All");
   const [showAllArtists, setShowAllArtists] = useState(false);
@@ -18,7 +30,7 @@ function LineUp() {
         "Hardwell",
         "Nicky Romero",
         "Quintino",
-        "Tiëto",
+        "Tiësto",
         "Calvin Harris",
         "Martin Garrix",
       ],
@@ -34,7 +46,7 @@ function LineUp() {
         "Disclosure",
         "DJ Snake",
         "Charlotte de Witte",
-        "Dr.Peacock",
+        "Dr. Peacock",
         "Excision",
         "deadmau5",
       ],
@@ -87,75 +99,104 @@ function LineUp() {
     currentFilter === "All" || value === currentFilter;
 
   return (
-    <div className={styles.body}>
-      <div className={styles["lineup-block"]}>
-        <h2>LINEUP</h2>
-      </div>
-      <iframe
-        className={styles.lecteur}
-        title="player"
-        style={{ borderRadius: "15px" }}
-        src="https://open.spotify.com/embed/playlist/1TqwrS5c8vgpO4h4U5gPjQ?utm_source=generator"
-        width="90%"
-        height="150"
-        frameBorder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy"
-      />
-      <div className={styles["box-filter"]}>
-        <input
-          className={styles.input}
-          type="search"
-          placeholder="Nom de l' artiste"
-          value={filter}
-          onChange={(e) => setFilter(e.target.value)}
+    <>
+      <div className={styles.body}>
+        <div className={styles["lineup-block"]}>
+          <h2>LINEUP</h2>
+        </div>
+        <iframe
+          className={styles.lecteur}
+          title="player"
+          style={{ borderRadius: "15px" }}
+          src="https://open.spotify.com/embed/playlist/1TqwrS5c8vgpO4h4U5gPjQ?utm_source=generator"
+          width="90%"
+          height="150"
+          frameBorder="0"
+          allowfullscreen=""
+          allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+          loading="lazy"
         />
-        <button
-          className={`${styles["button-artistes"]} ${
-            showAllArtists ? styles["active-artistes"] : ""
-          }`}
-          type="submit"
-          onClick={handleAllArtists}
-        >
-          Artistes
-        </button>
-        <select
-          className={styles["button-stage"]}
-          onChange={(e) => setStageFilter(e.target.value)}
-        >
-          <option value="All">All Stages</option>
-          <option value="Flying High">Flying High</option>
-          <option value="Sonic Sphere">Sonic Sphere</option>
-          <option value="Electronic Dawn">Electronic Dawn</option>
-          <option value="Sunset Stage">Sunset Stage</option>
-        </select>
+        <div className={styles["box-filter"]}>
+          <input
+            className={styles.input}
+            type="search"
+            placeholder="Nom de l' artiste"
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+          />
+          <button
+            className={`${styles["button-artistes"]} ${
+              showAllArtists ? styles["active-artistes"] : ""
+            }`}
+            type="submit"
+            onClick={handleAllArtists}
+          >
+            Artistes
+          </button>
+          <select
+            className={styles["button-stage"]}
+            onChange={(e) => setStageFilter(e.target.value)}
+          >
+            <option value="All">All Stages</option>
+            <option value="Flying High">Flying High</option>
+            <option value="Sonic Sphere">Sonic Sphere</option>
+            <option value="Electronic Dawn">Electronic Dawn</option>
+            <option value="Sunset Stage">Sunset Stage</option>
+          </select>
+        </div>
+        <div className={styles.stage_content}>
+          {showAllArtists
+            ? artists
+                .filter((artist) =>
+                  artist.toLowerCase().includes(filter.toLowerCase())
+                )
+                .map((artist) => (
+                  <button
+                    className={styles.allArtist}
+                    key={artist}
+                    onClick={togglePopUp}
+                    onKeyDown={togglePopUp}
+                    type="button"
+                  >
+                    {artist}
+                  </button>
+                ))
+            : data
+                .filter(({ stage }) => matchesFilter(stage, stageFilter))
+                .map(({ stage, artistes }) => (
+                  <div className={styles.container} key={stage}>
+                    <h4 className={styles.stageName}>{stage}</h4>
+                    <ul>
+                      {artistes
+                        .filter((artist) =>
+                          artist.toLowerCase().includes(filter.toLowerCase())
+                        )
+                        .map((artist) => (
+                          <button
+                            key={artist}
+                            onClick={togglePopUp}
+                            onKeyDown={togglePopUp}
+                            type="button"
+                          >
+                            {artist}
+                          </button>
+                        ))}
+                    </ul>
+                  </div>
+                ))}
+        </div>
       </div>
-      <div className={styles.stage_content}>
-        {showAllArtists
-          ? artists
-              .filter((artist) =>
-                artist.toLowerCase().includes(filter.toLowerCase())
-              )
-              .map((artist) => <li key={artist}>{artist}</li>)
-          : data
-              .filter(({ stage }) => matchesFilter(stage, stageFilter))
-              .map(({ stage, artistes }) => (
-                <div key={stage}>
-                  <h4>{stage}</h4>
-                  <ul>
-                    {artistes
-                      .filter((artist) =>
-                        artist.toLowerCase().includes(filter.toLowerCase())
-                      )
-                      .map((artist) => (
-                        <li key={artist}>{artist}</li>
-                      ))}
-                  </ul>
-                </div>
-              ))}
-      </div>
-    </div>
+
+      {popUp && (
+        <div className={styles.popUp}>
+          <div className={styles.overlay} />
+          <ArtistDescription
+            togglePopUp={togglePopUp}
+            artistSelected={artistSelected}
+          />
+        </div>
+      )}
+    </>
   );
 }
 

@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 @font-face {
   font-family: "Rubik";
   src: url("../assets/Fonts/Rubik-Regular.ttf");
@@ -17,6 +12,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.container {
+  margin-bottom: 1em;
+}
+
+.stageName {
+  margin-bottom: 1em;
 }
 
 .lineup-block {
@@ -52,9 +55,13 @@
   button {
     cursor: pointer;
     font-family: "Rubik";
-    background: linear-gradient(120deg, #8e7d9a, #ffb79e);
+    background: linear-gradient(120deg, #c3a0d5, #ffa269);
     border: none;
     border-radius: 8px;
+  }
+
+  .stageName {
+    margin-bottom: 1em;
   }
 
   .button-artistes {
@@ -64,14 +71,12 @@
   .button-stage {
     height: 25px;
     width: 150px;
-    background: linear-gradient(320deg, #8e7d9a, #ffb79e);
+    background: linear-gradient(320deg, #c3a0d5, #ffa269);
     border-radius: 8px;
     border: none;
     padding-left: 5px;
-    }
   }
-  
-
+}
 
 .active-artistes {
   border-radius: 15px;
@@ -80,9 +85,16 @@
   color: #fff;
 }
 
-
 .stage_content {
   width: 100dvw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .allArtist {
+    width: 70%;
+    text-align: left;
+  }
 
   ul {
     display: flex;
@@ -91,16 +103,20 @@
     list-style: none;
     justify-content: center;
   }
-  li {
-    margin-right: 10px;
-    margin-bottom: 10px;
+  button {
+    margin-right: 1em;
+    margin-bottom: 1em;
+    border: none;
     border-bottom: 2px solid white;
     font-family: "Rubik";
-    color: white;
     cursor: pointer;
+    background-color: transparent;
+    color: white;
+    font-size: 1.2em;
   }
   h4 {
     text-align: center;
+    font-size: 1.5em;
   }
 }
 
