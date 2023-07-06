@@ -152,6 +152,7 @@ function LineUp() {
                 )
                 .map((artist) => (
                   <button
+                    className={styles.allArtist}
                     key={artist}
                     onClick={togglePopUp}
                     onKeyDown={togglePopUp}
